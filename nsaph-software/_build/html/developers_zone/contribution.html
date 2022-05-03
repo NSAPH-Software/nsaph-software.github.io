@@ -1,0 +1,447 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contribution &#8212; NSAPH Software</title>
+    
+  <link href="../_static/css/theme.css" rel="stylesheet">
+  <link href="../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../_static/js/index.be7d3bbb2ef33a8344ce.js">
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Styling Guide" href="styling_guide.html" />
+    <link rel="prev" title="TBD" href="../research_gallery/TBD.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="../_static/NSAPH-Software-Logo_2.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">NSAPH Software</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../intro.html">
+   National Studies on Air Pollution and Health Software
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Research Gallery
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../research_gallery/TBD.html">
+   TBD
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Developers Zone
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Contribution
+  </a>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="styling_guide.html">
+   Styling Guide
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="r.html">
+     R Styling Guide
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="python.html">
+     Python Styling Guide
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Blog Posts
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../blog_posts/TBD.html">
+   TBD
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../_sources/developers_zone/contribution.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.md</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/NSAPH-Software/nsaph-software.github.io"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/NSAPH-Software/nsaph-software.github.io/issues/new?title=Issue%20on%20page%20%2Fdevelopers_zone/contribution.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        <a class="edit-button" href="https://github.com/NSAPH-Software/nsaph-software.github.io/edit/main/docs/developers_zone/contribution.md"><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Edit this page"><i class="fas fa-pencil-alt"></i>suggest edit</button></a>
+    </div>
+</div>
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#git-branching-model">
+   Git Branching Model
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#submitting-a-pull-request-pr">
+   Submitting a Pull Request (PR)
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#reporting-bugs">
+   Reporting Bugs
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#scientific-discussions">
+   Scientific Discussions
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#log-messages">
+   Log Messages
+  </a>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Contribution</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#git-branching-model">
+   Git Branching Model
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#submitting-a-pull-request-pr">
+   Submitting a Pull Request (PR)
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#reporting-bugs">
+   Reporting Bugs
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#scientific-discussions">
+   Scientific Discussions
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#log-messages">
+   Log Messages
+  </a>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            
+              <div>
+                
+  <div class="tex2jax_ignore mathjax_ignore section" id="contribution">
+<h1>Contribution<a class="headerlink" href="#contribution" title="Permalink to this headline">¶</a></h1>
+<p>Contributions to any of the NSAPH-Software packages are welcome and strongly encouraged.  These contributions can come in different forms, including but not limited to:</p>
+<ul class="simple">
+<li><p>Adding new features,</p></li>
+<li><p>Improving documentation,</p></li>
+<li><p>Addressing open issues,</p></li>
+<li><p>Reporting a bug or requesting a new feature,</p></li>
+<li><p>Fixing typos in the documentation,</p></li>
+<li><p>Improving logging messages,</p></li>
+<li><p>And many more.</p></li>
+</ul>
+<p>Please read the following documents before making changes to the codebase.</p>
+<div class="section" id="git-branching-model">
+<h2>Git Branching Model<a class="headerlink" href="#git-branching-model" title="Permalink to this headline">¶</a></h2>
+<p>Although, in your personal repository, you can pick any branch name, however, to keep consistency and understand who is working on what, the following convention is strongly recommended. In this project, we follow the convention that Vincent Driessen proposes in his [A successful Git branching model](A successful Git branching model) post.</p>
+<p>Here is the summary of the branches:</p>
+<ul>
+<li><p><strong>master/main</strong>: master/main branch only hosts the released software packages. Only project maintainers have a write-access on the master/main branch.</p></li>
+<li><p><strong>develop</strong>: develop branch is considered the main branch where the source code of HEAD always reflects a state with the latest delivered development changes for the next release.</p></li>
+<li><p><strong>supporting branch</strong>: There are different supporting branches; three main supporting branches that we suggest the contributors follow the naming convention include:</p>
+<ul>
+<li><p><strong>feature</strong>: we start a new feature branch to add new features to the software. The naming convention is iss[issue_number]_short_description. For example, if I need to add unittest to one of the functions in the package and the issue number is 12, iss12_add_unittest can be a valid git branch name. We start with the issue number to go back and take a look at the issue details if necessary. Although feature branches are temporary, this naming convention helps developers to understand the situation while working on the codebase. If you are working on some features that there is no open issue for that, please open an issue and put a comment that you are working on that issue.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>It is a good idea to consult with the package maintainers and/or core developers before committing significant time to add new features to make sure that it fits into the short-term and long-term release plans.</p>
+</div>
+</li>
+<li><p><strong>hotfix</strong>: hotfix branches will be only used for fixing a bug on a released package. After fixing the bug, the third digit of the version number should be incremented by one. For example, 2.3.5 –&gt; 2.3.6. These branches will be prefixed with hotfix and followed by the upcoming version number (e.g., in this case, hotfix_2.3.6)</p></li>
+<li><p><strong>release</strong>: Release branches support the preparation of a new production release.</p></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="section" id="submitting-a-pull-request-pr">
+<h2>Submitting a Pull Request (PR)<a class="headerlink" href="#submitting-a-pull-request-pr" title="Permalink to this headline">¶</a></h2>
+<p>All pull requests should be submitted to the develop branch of each package. Here is the PR checklist:</p>
+<ul class="simple">
+<li><p>If you added a new feature, make sure that appropriate unittests and documentation are also added.</p></li>
+<li><p>Make sure that you have merged the latest code from the develop branch into your feature branch.</p></li>
+<li><p>Update the <a class="reference external" href="http://NEWS.md">NEWS.md</a> file with the changes that you make (Do not change the version or title of the <a class="reference external" href="http://NEWS.md">NEWS.md</a> file).</p></li>
+<li><p>Make sure to clean up white spaces. Read more <a class="reference external" href="https://softwareengineering.stackexchange.com/questions/121555/why-is-trailing-whitespace-a-big-deal">here</a>.</p></li>
+<li><p>Make sure the code passes all tests in your local system.</p></li>
+<li><p>After submitting a PR, please keep an eye on the CI test/check results. If there is a failed test or check, please address them and resubmit.</p></li>
+</ul>
+</div>
+<div class="section" id="reporting-bugs">
+<h2>Reporting Bugs<a class="headerlink" href="#reporting-bugs" title="Permalink to this headline">¶</a></h2>
+<p>Please report potential bugs by opening a new issue in the package repository. Please include the following information in your bug report:</p>
+<ul class="simple">
+<li><p>A brief description of what you are doing, what you expected to happen, and what happened.</p></li>
+<li><p>OS that you are using and whether you are using a personal computer or HPC cluster.</p></li>
+<li><p>The version of the package that you have installed.</p></li>
+</ul>
+</div>
+<div class="section" id="scientific-discussions">
+<h2>Scientific Discussions<a class="headerlink" href="#scientific-discussions" title="Permalink to this headline">¶</a></h2>
+<p>In scientific research, many decisions can still be open research questions. We may choose an approach, document it, and move forward. However, other options can be valid and open to discussion. We strongly encourage contributing to these discussions under each repository’s <code class="docutils literal notranslate"><span class="pre">Discussions</span></code> tab.</p>
+</div>
+<div class="section" id="log-messages">
+<h2>Log Messages<a class="headerlink" href="#log-messages" title="Permalink to this headline">¶</a></h2>
+<p>All packages come with logging capabilities. Log messages are very important in understanding the internal processes, catching bugs, and developing robust software. If you add new features, please also add logging messages. TODO: Different levels of logging messages.</p>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./developers_zone"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            
+                <!-- Previous / next buttons -->
+<div class='prev-next-area'> 
+    <a class='left-prev' id="prev-link" href="../research_gallery/TBD.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">TBD</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="styling_guide.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Styling Guide</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+            
+        </div>
+    </div>
+    <footer class="footer">
+  <p>
+    
+      By NSAPH Software Developing Team<br/>
+    
+        &copy; Copyright 2022.<br/>
+  </p>
+</footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+
+  </body>
+</html>

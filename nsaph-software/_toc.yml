@@ -3,7 +3,17 @@
 
 format: jb-book
 root: intro
-chapters:
-- file: markdown
-- file: notebooks
-- file: markdown-notebooks
+parts:
+  - caption: Research Gallery
+    chapters:
+    - file: research_gallery/TBD.md
+  - caption: Developers Zone
+    chapters:
+    - file: developers_zone/contribution.md
+    - file: developers_zone/styling_guide.md
+      sections:
+      - file: developers_zone/r.md
+      - file: developers_zone/python.md
+  - caption: Blog Posts
+    chapters:
+    - file: blog_posts/TBD.md
