@@ -32,7 +32,7 @@ Matching on generalized propensity scores with continuous exposures
 **[pycausalgps](https://github.com/fasrc/pycausalgps/)**
 ^^^
 
-```{figure} figures/svg/place_holder.svg
+```{figure} figures/svg/causalgps_logo_python.svg
 :height: 100px
 :name: pycausalgps
 ```
