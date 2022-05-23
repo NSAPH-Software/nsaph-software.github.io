@@ -16,4 +16,4 @@ parts:
       - file: developers_zone/python.md
   - caption: Blog Posts
     chapters:
-    - file: blog_posts/TBD.md
+    - file: blog_posts/renv_docker.md

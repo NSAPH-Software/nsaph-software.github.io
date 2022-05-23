@@ -60,7 +60,7 @@ Interpretable Subgroups Identification through Ensemble Learning of Causal Rules
 **[GPCERF](https://github.com/NSAPH-Software/GPCERF)**
 ^^^
 
-```{figure} figures/svg/place_holder.svg
+```{figure} figures/svg/gpcerf_logo.svg
 :height: 100px
 :name: gpcerf
 ```
