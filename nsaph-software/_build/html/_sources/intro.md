@@ -91,7 +91,7 @@ Continuous Causal Interaction Tree
 **[NSAPHUtils](https://github.com/NSAPH-Software/NSAPHutils)**
 ^^^
 
-```{figure} figures/svg/place_holder.svg
+```{figure} figures/svg/nsaphutils_logo.svg
 :height: 100px
 :name: nsaphutils
 ```
