@@ -9,6 +9,7 @@ parts:
     - file: research_gallery/TBD.md
   - caption: Developers Zone
     chapters:
+    - file: developers_zone/faq.md
     - file: developers_zone/contribution.md
     - file: developers_zone/styling_guide.md
       sections:

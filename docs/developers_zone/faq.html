@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Styling Guide &#8212; NSAPH Software</title>
+    <title>Frequently Asked Questions &#8212; NSAPH Software</title>
     
   <link href="../_static/css/theme.css" rel="stylesheet">
   <link href="../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
@@ -53,8 +53,8 @@ const thebe_selector_output = ".output, .cell_output"
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="R Styling Guide" href="r.html" />
-    <link rel="prev" title="Contribution" href="contribution.html" />
+    <link rel="next" title="Contribution" href="contribution.html" />
+    <link rel="prev" title="TBD" href="../research_gallery/TBD.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -116,8 +116,8 @@ const thebe_selector_output = ".output, .cell_output"
  </span>
 </p>
 <ul class="current nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="faq.html">
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
    Frequently Asked Questions
   </a>
  </li>
@@ -126,11 +126,11 @@ const thebe_selector_output = ".output, .cell_output"
    Contribution
   </a>
  </li>
- <li class="toctree-l1 current active has-children">
-  <a class="current reference internal" href="#">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="styling_guide.html">
    Styling Guide
   </a>
-  <input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
   <label for="toctree-checkbox-1">
    <i class="fas fa-chevron-down">
    </i>
@@ -197,7 +197,7 @@ const thebe_selector_output = ".output, .cell_output"
         <!-- ipynb file if we had a myst markdown file -->
         
         <!-- Download raw file -->
-        <a class="dropdown-buttons" href="../_sources/developers_zone/styling_guide.md"><button type="button"
+        <a class="dropdown-buttons" href="../_sources/developers_zone/faq.md"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
                 data-placement="left">.md</button></a>
         <!-- Download PDF via print -->
@@ -217,10 +217,10 @@ const thebe_selector_output = ".output, .cell_output"
                 data-toggle="tooltip" data-placement="left" title="Source repository"><i
                     class="fab fa-github"></i>repository</button></a>
         <a class="issues-button"
-            href="https://github.com/NSAPH-Software/nsaph-software.github.io/issues/new?title=Issue%20on%20page%20%2Fdevelopers_zone/styling_guide.html&body=Your%20issue%20content%20here."><button
+            href="https://github.com/NSAPH-Software/nsaph-software.github.io/issues/new?title=Issue%20on%20page%20%2Fdevelopers_zone/faq.html&body=Your%20issue%20content%20here."><button
                 type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
                 title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
-        <a class="edit-button" href="https://github.com/NSAPH-Software/nsaph-software.github.io/edit/main/docs/developers_zone/styling_guide.md"><button
+        <a class="edit-button" href="https://github.com/NSAPH-Software/nsaph-software.github.io/edit/main/docs/developers_zone/faq.md"><button
                 type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
                 title="Edit this page"><i class="fas fa-pencil-alt"></i>suggest edit</button></a>
     </div>
@@ -247,7 +247,7 @@ const thebe_selector_output = ".output, .cell_output"
         <div class="col-12 col-md-9 pl-md-3 pr-md-0">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Styling Guide</h1>
+                <h1>Frequently Asked Questions</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
@@ -258,15 +258,30 @@ const thebe_selector_output = ".output, .cell_output"
             
               <div>
                 
-  <div class="tex2jax_ignore mathjax_ignore section" id="styling-guide">
-<h1>Styling Guide<a class="headerlink" href="#styling-guide" title="Permalink to this headline">¶</a></h1>
-<ul class="simple">
-<li><p><a class="reference internal" href="r.html"><span class="doc std std-doc">R Styling Guide</span></a></p></li>
-<li><p><a class="reference internal" href="python.html"><span class="doc std std-doc">Python Styling Guide</span></a></p></li>
-</ul>
-<div class="toctree-wrapper compound">
+  <div class="tex2jax_ignore mathjax_ignore section" id="frequently-asked-questions">
+<h1>Frequently Asked Questions<a class="headerlink" href="#frequently-asked-questions" title="Permalink to this headline">¶</a></h1>
+<details><summary>  <b>1)</b> I am following the steps in generating the docker development image in R; however, it seems the volume is not synchronized between the docker container and my host machine. Do you have any idea? </summary>
+<p>
+<p>This question is related to <a class="reference internal" href="../blog_posts/renv_docker.html#setting-rep-env"><span class="std std-ref">Setting Up A Reproducible Environment</span></a>. The problem can happen in case of using different username and volume mount path. Make sure that the 3 shown user are the same values.</p>
+<div class="highlight-s notranslate"><div class="highlight"><pre><span></span><span class="n">docker</span> <span class="n">run</span> <span class="o">-</span><span class="n">it</span> <span class="o">--</span><span class="n">rm</span> \
+        <span class="o">-</span><span class="n">p</span> <span class="m">8787</span><span class="o">:</span><span class="m">8787</span> \
+        <span class="o">-</span><span class="n">e</span> <span class="n">USER</span><span class="o">=</span> <span class="o">--&gt;</span> <span class="n">user</span> <span class="o">&lt;--</span> \
+        <span class="o">-</span><span class="n">e</span> <span class="n">PASSWORD</span><span class="o">=</span><span class="n">password</span> \
+        <span class="o">-</span><span class="n">v</span> <span class="s">&quot;[Path to Project A on your system]:/home/ --&gt; user &lt;-- /Project_A&quot;</span> \
+        <span class="o">-</span><span class="n">v</span> <span class="s">&quot;[Path to cache on your system]:/home/ --&gt;user &lt;-- /cache&quot;</span> <span class="n">rvers</span>
+</pre></div>
 </div>
+</p>
+</details>
+<hr class="docutils" />
+<details><summary>  <b>2)</b> Trying to load the package using <span style="background-color: #FDD3D0"> devtools::load_all() </span>, however, received <span style="background-color: #FDD3D0"> Error in dyn.load(dll_copy_file) : unable to load shared object, invalid ELF header </span>.  </summary>
+<p>
+<p>This is mainly happens because the new docker container (possibliy run on Ubuntu) trying to use <code class="docutils literal notranslate"><span class="pre">.dll</span></code> cache file that is generated with other system. To resolve this issue, run the following command:</p>
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">devtools</span><span class="o">::</span><span class="nf">clean_dll</span><span class="p">()</span>
+</pre></div>
 </div>
+</p>
+</details></div>
 
     <script type="text/x-thebe-config">
     {
@@ -293,17 +308,17 @@ const thebe_selector_output = ".output, .cell_output"
             
                 <!-- Previous / next buttons -->
 <div class='prev-next-area'> 
-    <a class='left-prev' id="prev-link" href="contribution.html" title="previous page">
+    <a class='left-prev' id="prev-link" href="../research_gallery/TBD.html" title="previous page">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">Contribution</p>
+            <p class="prev-next-title">TBD</p>
         </div>
     </a>
-    <a class='right-next' id="next-link" href="r.html" title="next page">
+    <a class='right-next' id="next-link" href="contribution.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">R Styling Guide</p>
+        <p class="prev-next-title">Contribution</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>

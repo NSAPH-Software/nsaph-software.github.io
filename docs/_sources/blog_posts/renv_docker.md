@@ -1,3 +1,4 @@
+(setting_rep_env)=
 # Setting Up A Reproducible Environment 
 
 - By: Naeem Khoshnevis 
@@ -276,8 +277,8 @@ docker run -it --rm \
         -p 8787:8787 \
         -e USER=user \
         -e PASSWORD=password \
-        -v "[Path to Project A on your system]:/home/rstudio/Project_A" \
-        -v "[Path to cache on your system]:/home/rstudio/cache" rvers
+        -v "[Path to Project A on your system]:/home/user/Project_A" \
+        -v "[Path to cache on your system]:/home/user/cache" rvers
 ```
 
 - **Step 4**: Open your browser and type `http://localhost:8787/`
