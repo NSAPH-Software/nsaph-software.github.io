@@ -21,7 +21,7 @@ docker run -it --rm \
 
 ***********
 
-<details><summary>  <b>2)</b> Trying to load the package using <span style="background-color: #FEF3F2"> devtools::load_all() </span>, however, received <span style="background-color: #FEF3F2"> Error in dyn.load(dll_copy_file) : unable to load shared object, invalid ELF header </span>.  </summary>
+<details><summary>  <b>2)</b> Trying to load the package using <span style="background-color: #FFE6E4"> devtools::load_all() </span>, however, received <span style="background-color: #FFE6E4"> Error in dyn.load(dll_copy_file) : unable to load shared object, invalid ELF header </span>.  </summary>
 <p>
 
 This is mainly happening because the new docker container (possibly run on Ubuntu) is trying to use the `.dll` cache file that is generated with another system. To resolve this issue, run the following command:
