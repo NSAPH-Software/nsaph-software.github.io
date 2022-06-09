@@ -69,9 +69,12 @@ if(x > 2){
 }
 ```
 
+
 ## Other notes
 
 - Maximum line length is 80 character
 - Use explicit returns 
 - Use explicit tags in documentation (e.g., @title, @description, ... )
+- All assignments are done using `<-` not `=`.
+- Do not use `.` in the variable names and function names. `.` is reserved for S3 methods. Use `_` instead. `sim.data` --> `sim_data`.
 

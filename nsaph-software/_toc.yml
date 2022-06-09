@@ -18,3 +18,4 @@ parts:
   - caption: Blog Posts
     chapters:
     - file: blog_posts/renv_docker.md
+    - file: blog_posts/R_embarrassingly_parallel.md

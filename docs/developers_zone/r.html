@@ -160,6 +160,11 @@ const thebe_selector_output = ".output, .cell_output"
    Setting Up A Reproducible Environment
   </a>
  </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../blog_posts/R_embarrassingly_parallel.html">
+   Scaling Up/Out Embarrassingly Parallel Problems in R
+  </a>
+ </li>
 </ul>
 
     </div>
@@ -371,6 +376,8 @@ const thebe_selector_output = ".output, .cell_output"
 <li><p>Maximum line length is 80 character</p></li>
 <li><p>Use explicit returns</p></li>
 <li><p>Use explicit tags in documentation (e.g., &#64;title, &#64;description, … )</p></li>
+<li><p>All assignments are done using <code class="docutils literal notranslate"><span class="pre">&lt;-</span></code> not <code class="docutils literal notranslate"><span class="pre">=</span></code>.</p></li>
+<li><p>Do not use <code class="docutils literal notranslate"><span class="pre">.</span></code> in the variable names and function names. <code class="docutils literal notranslate"><span class="pre">.</span></code> is reserved for S3 methods. Use <code class="docutils literal notranslate"><span class="pre">_</span></code> instead. <code class="docutils literal notranslate"><span class="pre">sim.data</span></code> –&gt; <code class="docutils literal notranslate"><span class="pre">sim_data</span></code>.</p></li>
 </ul>
 </div>
 </div>
