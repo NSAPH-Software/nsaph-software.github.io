@@ -21,7 +21,7 @@ NSAPH Software is a collection of open-source packages to carry out **N**ational
 ```
 Matching on generalized propensity scores with continuous exposures
 
-[![](http://www.r-pkg.org/badges/version-last-release/CausalGPS)](http://www.r-pkg.org/pkg/causalgps)
+[![](http://www.r-pkg.org/badges/version-last-release/CausalGPS)](https://CRAN.R-project.org/package=CausalGPS)
 [![R build status](https://github.com/fasrc/CausalGPS/workflows/R-CMD-check/badge.svg)](https://github.com/fasrc/CausalGPS/actions)
 [![CRAN RStudio mirror downloads](https://cranlogs.r-pkg.org/badges/grand-total/CausalGPS)](http://www.r-pkg.org/pkg/causalgps)
 [![codecov](https://codecov.io/gh/fasrc/CausalGPS/branch/develop/graph/badge.svg?token=97PCUXRGXH)](https://app.codecov.io/gh/fasrc/CausalGPS/)
@@ -67,7 +67,7 @@ Interpretable Subgroups Identification through Ensemble Learning of Causal Rules
 
 Gaussian processes for the estimation of causal exposure-response curves (GPCERF)
 
-[![](http://www.r-pkg.org/badges/version-last-release/GPCERF)](http://www.r-pkg.org/pkg/gpcerf)
+[![](http://www.r-pkg.org/badges/version-last-release/GPCERF)](https://CRAN.R-project.org/package=GPCERF)
 [![R build status](https://github.com/NSAPH-Software/GPCERF/workflows/R-CMD-check/badge.svg)](https://github.com/NSAPH-Software/GPCERF/actions)
 [![codecov](https://codecov.io/gh/NSAPH-Software/GPCERF/branch/develop/graph/badge.svg?token=066ISL822N)](https://codecov.io/gh/NSAPH-Software/GPCERF)
 

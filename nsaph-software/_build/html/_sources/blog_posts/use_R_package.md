@@ -36,7 +36,7 @@ Examples:
 
 - As a PBS system user, I want to be able to submit separate jobs for each exposure level, so I can ask for less memory during job submission.  
 
-* In scientific topics, it might not be easy to write the user stories in the exact format. Just try your best. 
+Note: In scientific topics, it might not be easy to write the user stories in the exact format. Just try your best. 
 ```
 
 ### Major Enhancements
