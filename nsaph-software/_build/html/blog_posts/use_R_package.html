@@ -1,0 +1,614 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Using an R Package in an Ongoing Research &#8212; NSAPH Software</title>
+    
+  <link href="../_static/css/theme.css" rel="stylesheet">
+  <link href="../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../_static/js/index.be7d3bbb2ef33a8344ce.js">
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="prev" title="Scaling Up/Out Embarrassingly Parallel Problems in R" href="R_embarrassingly_parallel.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="../_static/NSAPH-Software-Logo_2.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">NSAPH Software</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../intro.html">
+   National Studies on Air Pollution and Health Software
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Research Gallery
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../research_gallery/TBD.html">
+   TBD
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Developers Zone
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../developers_zone/faq.html">
+   Frequently Asked Questions
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../developers_zone/contribution.html">
+   Contribution
+  </a>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../developers_zone/styling_guide.html">
+   Styling Guide
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../developers_zone/r.html">
+     R Styling Guide
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../developers_zone/python.html">
+     Python Styling Guide
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Blog Posts
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="renv_docker.html">
+   Setting Up A Reproducible Environment
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="R_embarrassingly_parallel.html">
+   Scaling Up/Out Embarrassingly Parallel Problems in R
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Using an R Package in an Ongoing Research
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../_sources/blog_posts/use_R_package.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.md</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/NSAPH-Software/nsaph-software.github.io"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/NSAPH-Software/nsaph-software.github.io/issues/new?title=Issue%20on%20page%20%2Fblog_posts/use_R_package.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        <a class="edit-button" href="https://github.com/NSAPH-Software/nsaph-software.github.io/edit/main/docs/blog_posts/use_R_package.md"><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Edit this page"><i class="fas fa-pencil-alt"></i>suggest edit</button></a>
+    </div>
+</div>
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#asking-for-new-features">
+   Asking for new features
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#minor-changes">
+     Minor changes
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#major-enhancements">
+     Major Enhancements
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#implementing-new-features">
+   Implementing new features
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#you-do-not-plan-on-merging-your-code-to-the-original-code-base">
+     You do not plan on merging your code to the original code base
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#you-are-not-sure-if-you-will-merge-the-code-to-the-original-code-base">
+     You are not sure if you will merge the code to the original code base
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#you-plan-on-merging-the-code-to-the-original-code-base">
+     You plan on merging the code to the original code base
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#technical-details">
+   Technical Details
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#frequently-asked-questions">
+   Frequently Asked Questions
+  </a>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Using an R Package in an Ongoing Research</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#asking-for-new-features">
+   Asking for new features
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#minor-changes">
+     Minor changes
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#major-enhancements">
+     Major Enhancements
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#implementing-new-features">
+   Implementing new features
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#you-do-not-plan-on-merging-your-code-to-the-original-code-base">
+     You do not plan on merging your code to the original code base
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#you-are-not-sure-if-you-will-merge-the-code-to-the-original-code-base">
+     You are not sure if you will merge the code to the original code base
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#you-plan-on-merging-the-code-to-the-original-code-base">
+     You plan on merging the code to the original code base
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#technical-details">
+   Technical Details
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#frequently-asked-questions">
+   Frequently Asked Questions
+  </a>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            
+              <div>
+                
+  <div class="tex2jax_ignore mathjax_ignore section" id="using-an-r-package-in-an-ongoing-research">
+<span id="using-r-package-in-research"></span><h1>Using an R Package in an Ongoing Research<a class="headerlink" href="#using-an-r-package-in-an-ongoing-research" title="Permalink to this headline">¶</a></h1>
+<ul class="simple">
+<li><p>By: Naeem Khoshnevis</p></li>
+<li><p>Last Update: July 06, 2022</p></li>
+</ul>
+<p>This blog post addresses the need to use a modified version of R packages in ongoing research studies. Most of our packages and 90% of open source packages are rapidly underdevelopment. Although they have the core modules for the initial research, they might not be sufficient for conducting similar or completely different analyses. As a result, at some point, either you need some new features in the package, or you would like to see some modified version of the implemented functions. This post will go through best practices for handling these situations. There are two main scenarios with several subsections:</p>
+<ul class="simple">
+<li><p><strong>Asking for new features</strong> (you want the core developers (or any other open-source contributor) to implement it)</p>
+<ul>
+<li><p>The changes are minor, or they fit in the current design.</p></li>
+<li><p>The requested features may require some discussions, and you do not know where they fit.</p></li>
+</ul>
+</li>
+<li><p><strong>Implementing new features</strong></p>
+<ul>
+<li><p>You do not plan on merging your code to the original code base.</p></li>
+<li><p>You are not sure if you will merge the code to the original code base.</p></li>
+<li><p>You plan on merging the code to the original code base.</p></li>
+</ul>
+</li>
+</ul>
+<p>The first category mainly deals with applied research, and the second category mostly happens with method research.</p>
+<div class="section" id="asking-for-new-features">
+<h2>Asking for new features<a class="headerlink" href="#asking-for-new-features" title="Permalink to this headline">¶</a></h2>
+<p>We can divide the features based on their complexity, and wether it does fit in the current design or not.</p>
+<div class="section" id="minor-changes">
+<h3>Minor changes<a class="headerlink" href="#minor-changes" title="Permalink to this headline">¶</a></h3>
+<p>The best place to request for minor changes is the <code class="docutils literal notranslate"><span class="pre">issues</span></code> tab on the project repository. Although, opening an issue, opens doors for more discussions, it would be efficient if you put it in a user story format.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>User stories helps the developers to understand the feature. Here is a template:</p>
+<ul class="simple">
+<li><p>As a (who wants to accomplish something)</p></li>
+<li><p>I want to (what they want to accomplish)</p></li>
+<li><p>So that (why they want to accomplish that thing)</p></li>
+</ul>
+<p>Examples:</p>
+<ul class="simple">
+<li><p>As a Macbook Pro user, I want to be able define max memory limit, so I am not constrained by limited memory on my system.</p></li>
+<li><p>As a PBS system user, I want to be able to submit separate jobs for each exposure level, so I can ask for less memory during job submission.</p></li>
+</ul>
+<ul class="simple">
+<li><p>In scientific topics, it might not be easy to write the user stories in the exact format. Just try your best.</p></li>
+</ul>
+</div>
+</div>
+<div class="section" id="major-enhancements">
+<h3>Major Enhancements<a class="headerlink" href="#major-enhancements" title="Permalink to this headline">¶</a></h3>
+<p>Significant enhancements require comprehensive discussions and sometimes revisions in the design. The best place to discuss these topics is the <code class="docutils literal notranslate"><span class="pre">Discussions</span></code> tab. Just open a new discussion and discuss your idea. We suggest checking other discussions first. It might be an ongoing discussion, and you can contribute to it rather than starting a new discussion.</p>
+</div>
+</div>
+<div class="section" id="implementing-new-features">
+<h2>Implementing new features<a class="headerlink" href="#implementing-new-features" title="Permalink to this headline">¶</a></h2>
+<p>Sometimes, you need to control the codebase, modify it, and debug it. In these situations, first, you need to make sure that the package license allows you to get the code, and also, you need to build some communication with the package developers. The extent of the communication depends on your final goal with the development. In the following, the extent of the communication is listed from low to high. Technical details are mentioned in the next section.</p>
+<div class="section" id="you-do-not-plan-on-merging-your-code-to-the-original-code-base">
+<h3>You do not plan on merging your code to the original code base<a class="headerlink" href="#you-do-not-plan-on-merging-your-code-to-the-original-code-base" title="Permalink to this headline">¶</a></h3>
+<p>If you are 100% sure that you are not going to ask for help, or merge your code to the original codebase, you can just fork the project into your Github account and start modifying the code.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>According to the GPLv3 license, on which most of our packages are based, you are obligated to share your code after modification, regardless of the status of merging the code to the original codebase.</p>
+</div>
+</div>
+<div class="section" id="you-are-not-sure-if-you-will-merge-the-code-to-the-original-code-base">
+<h3>You are not sure if you will merge the code to the original code base<a class="headerlink" href="#you-are-not-sure-if-you-will-merge-the-code-to-the-original-code-base" title="Permalink to this headline">¶</a></h3>
+<p>Sometimes, you are working on a new idea, and you try to see if you can get better results or prove a concept. You are planning to merge your changes if you get acceptable results. In that case, you need to:</p>
+<ul class="simple">
+<li><p>Follow the styling guides</p></li>
+<li><p>Make sure you do not remove or modify the existing tests.</p></li>
+<li><p>Make sure that your changes can pass old tests.</p></li>
+<li><p>Closely track the developed branch and try to keep your branch updated as much as possible.</p></li>
+<li><p>Keep your changes small and commit them with elaborate commit message.</p></li>
+<li><p>Use new branches for subtasks.</p></li>
+<li><p>Update <a class="reference external" href="http://NEWS.md">NEWS.md</a> file with each change.</p></li>
+</ul>
+</div>
+<div class="section" id="you-plan-on-merging-the-code-to-the-original-code-base">
+<h3>You plan on merging the code to the original code base<a class="headerlink" href="#you-plan-on-merging-the-code-to-the-original-code-base" title="Permalink to this headline">¶</a></h3>
+<p>In case you are working on one of the open issues, or you need significant support from the core developers in adding new features, or you are working on some features that you are convinced that it should be part of the original code base, Additional to the previously mentioned tasks:</p>
+<ul class="simple">
+<li><p>Open an issue or a discussion if there isn’t one.</p></li>
+<li><p>Attend the weekly meetings.</p></li>
+</ul>
+</div>
+</div>
+<div class="section" id="technical-details">
+<h2>Technical Details<a class="headerlink" href="#technical-details" title="Permalink to this headline">¶</a></h2>
+<p>Regardless of your decision in merging the code, these are the steps to take:</p>
+<ul>
+<li><p><strong>Step 1</strong>: Fork the project into your Github account.</p></li>
+<li><p><strong>Step 2</strong>: Clone the repository into your local system.</p></li>
+<li><p><strong>Step 3</strong>: Click on the <code class="docutils literal notranslate"><span class="pre">.Rproj</span></code> file to open the project in RStudio.</p></li>
+<li><p><strong>Step 4</strong>: Install <code class="docutils literal notranslate"><span class="pre">devtools</span></code>.</p>
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">install.packages</span><span class="p">(</span><span class="s">&quot;devtools&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</li>
+<li><p><strong>Step 5</strong>: Modify your code.</p></li>
+<li><p><strong>Step 6</strong>: Load modified code.</p>
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">devtools</span><span class="o">::</span><span class="nf">load_all</span><span class="p">()</span>
+</pre></div>
+</div>
+</li>
+<li><p><strong>Step 7</strong>: Repeat steps 5 and 6.</p></li>
+</ul>
+</div>
+<div class="section" id="frequently-asked-questions">
+<h2>Frequently Asked Questions<a class="headerlink" href="#frequently-asked-questions" title="Permalink to this headline">¶</a></h2>
+<ul>
+<li><p><em>How can I make sure that the code passes all tests?</em></p>
+<ul class="simple">
+<li><p>Run:</p></li>
+</ul>
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">devtools</span><span class="o">::</span><span class="nf">test</span><span class="p">()</span>
+</pre></div>
+</div>
+</li>
+<li><p><em>How can I make sure that the code passes all checks?</em></p>
+<ul class="simple">
+<li><p>Run:</p></li>
+</ul>
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">devtools</span><span class="o">::</span><span class="nf">check</span><span class="p">()</span>
+</pre></div>
+</div>
+</li>
+<li><p><em>Where can I read more about these details?</em></p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://r-pkgs.org/">R Packages</a> book by Hadley Wickham and Jenny Bryan is the best source to learn more about R packaging.</p></li>
+</ul>
+</li>
+<li><p><em>I have changed the code and tested it; now I want to install it in another study; how can I make sure that I install the exact modified version?</em></p>
+<ul class="simple">
+<li><p>The best way is to install it from Github. Each commit has a hash value that can be used to install the package. For example:</p></li>
+</ul>
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">library</span><span class="p">(</span><span class="n">devtools</span><span class="p">)</span>
+<span class="nf">try</span><span class="p">(</span><span class="nf">detach</span><span class="p">(</span><span class="s">&quot;package:CausalGPS&quot;</span><span class="p">,</span> <span class="n">unload</span> <span class="o">=</span> <span class="kc">TRUE</span><span class="p">),</span> <span class="n">silent</span> <span class="o">=</span> <span class="kc">TRUE</span><span class="p">)</span> <span class="c1"># if already you have the package, detach and unload it, to have a new install. </span>
+<span class="nf">install_github</span><span class="p">(</span><span class="s">&quot;fasrc/CausalGPS&quot;</span><span class="p">,</span> <span class="n">ref</span><span class="o">=</span><span class="s">&quot;6b2b4d085eb53c5926f9deabe55da7d35c3b10aa&quot;</span><span class="p">)</span>
+<span class="nf">library</span><span class="p">(</span><span class="n">CausalGPS</span><span class="p">)</span>
+</pre></div>
+</div>
+</li>
+<li><p><em>I need to add changes to one of the functions, as a result of those changes, the tests will fail, can I modify the tests?</em></p>
+<ul class="simple">
+<li><p>Modifying the tests are not recommended. However, in case, you have no choice, please, comment out the origininal test, and add your new tests. Put the commented out tests and new tests in the following blocks.</p></li>
+</ul>
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="c1">## --- TODO: Commented out tests ---</span>
+<span class="c1"># Test 1</span>
+<span class="c1"># Test 2</span>
+<span class="c1"># ...</span>
+<span class="c1"># ----------------------------------</span>
+
+<span class="c1"># --- TODO: Added tests ------------</span>
+<span class="n">Test</span> <span class="m">1</span><span class="n">a</span>
+<span class="n">Test</span> <span class="m">2</span><span class="n">a</span>
+<span class="c1"># ...</span>
+<span class="c1"># ----------------------------------</span>
+</pre></div>
+</div>
+</li>
+<li><p><em>I want to refactor the entire function, what are the best practices?</em></p>
+<ul class="simple">
+<li><p>In the case of major refactoring, please duplicate the function and add a numerical suffix. However, you need to keep the git history. A simple copy and paste will remove the original file’s git history. To do that, let’s say you are on the <code class="docutils literal notranslate"><span class="pre">main</span></code> branch and you want to create a duplicate of the <code class="docutils literal notranslate"><span class="pre">generate_pseudo_pop.R</span></code> file. You can follow these steps that mentioned <a class="reference external" href="https://stackoverflow.com/a/46484848/6246352">here</a>:</p></li>
+</ul>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>git checkout -b duplicate <span class="c1"># create and checkout to duplicate branch</span>
+git mv generate_pseudo_pop.R generate_pseudo_pop_1.R <span class="c1"># Make the duplicate</span>
+git commit -m <span class="s2">&quot;duplicate generate_pseudo_pop.R to generate_pseudo_pop_1.R&quot;</span>
+git checkout HEAD~ generate_pseudo_pop.R <span class="c1"># Bring back the original file.</span>
+git commit -m <span class="s2">&quot;restore the original file.&quot;</span>
+git checkout main <span class="c1"># Switch back to the main branch</span>
+git merge --no-ff duplicate <span class="c1"># merge duplicate into main branch.</span>
+</pre></div>
+</div>
+</li>
+</ul>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./blog_posts"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            
+                <!-- Previous / next buttons -->
+<div class='prev-next-area'> 
+    <a class='left-prev' id="prev-link" href="R_embarrassingly_parallel.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">Scaling Up/Out Embarrassingly Parallel Problems in R</p>
+        </div>
+    </a>
+</div>
+            
+        </div>
+    </div>
+    <footer class="footer">
+  <p>
+    
+      By NSAPH Software Developing Team<br/>
+    
+        &copy; Copyright 2022.<br/>
+  </p>
+</footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+
+  </body>
+</html>
