@@ -22,7 +22,7 @@ NSAPH Software is a collection of open-source packages to carry out **N**ational
 Matching on generalized propensity scores with continuous exposures
 
 [![](http://www.r-pkg.org/badges/version-last-release/CausalGPS)](https://CRAN.R-project.org/package=CausalGPS)
-[![R build status](https://github.com/fasrc/CausalGPS/workflows/R-CMD-check/badge.svg)](https://github.com/fasrc/CausalGPS/actions)
+[![R build status](https://github.com/fasrc/CausalGPS/workflows/R-CMD-check/badge.svg?branch=develop)](https://github.com/fasrc/CausalGPS/actions)
 [![CRAN RStudio mirror downloads](https://cranlogs.r-pkg.org/badges/grand-total/CausalGPS)](http://www.r-pkg.org/pkg/causalgps)
 [![codecov](https://codecov.io/gh/fasrc/CausalGPS/branch/develop/graph/badge.svg?token=97PCUXRGXH)](https://app.codecov.io/gh/fasrc/CausalGPS/)
 [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/NSAPH/R_project_binder/master?urlpath=rstudio)
@@ -53,7 +53,7 @@ Matching on generalized propensity scores with continuous exposures (Python Pack
 Interpretable Subgroups Identification through Ensemble Learning of Causal Rules
 
 [![](http://www.r-pkg.org/badges/version-last-release/CRE)](http://www.r-pkg.org/pkg/cre)
-[![R-CMD-check](https://github.com/nsaph-software/CRE/workflows/R-CMD-check/badge.svg)](https://github.com/nsaph-software/CRE/actions)
+[![R-CMD-check](https://github.com/nsaph-software/CRE/workflows/R-CMD-check/badge.svg?branch=develop)](https://github.com/nsaph-software/CRE/actions)
 [![codecov](https://codecov.io/gh/NSAPH-Software/CRE/branch/develop/graph/badge.svg?token=UMSVOYRKGA)](https://codecov.io/gh/NSAPH-Software/CRE)
 
 ---
@@ -68,7 +68,7 @@ Interpretable Subgroups Identification through Ensemble Learning of Causal Rules
 Gaussian processes for the estimation of causal exposure-response curves (GPCERF)
 
 [![](http://www.r-pkg.org/badges/version-last-release/GPCERF)](https://CRAN.R-project.org/package=GPCERF)
-[![R build status](https://github.com/NSAPH-Software/GPCERF/workflows/R-CMD-check/badge.svg)](https://github.com/NSAPH-Software/GPCERF/actions)
+[![R build status](https://github.com/NSAPH-Software/GPCERF/workflows/R-CMD-check/badge.svg?branch=develop)](https://github.com/NSAPH-Software/GPCERF/actions)
 [![codecov](https://codecov.io/gh/NSAPH-Software/GPCERF/branch/develop/graph/badge.svg?token=066ISL822N)](https://codecov.io/gh/NSAPH-Software/GPCERF)
 
 
