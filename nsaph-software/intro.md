@@ -52,8 +52,9 @@ Matching on generalized propensity scores with continuous exposures (Python Pack
 
 Interpretable Subgroups Identification through Ensemble Learning of Causal Rules
 
-[![](http://www.r-pkg.org/badges/version-last-release/CRE)](http://www.r-pkg.org/pkg/cre)
+[![](http://www.r-pkg.org/badges/version-last-release/CRE)](https://CRAN.R-project.org/package=CRE)
 [![R-CMD-check](https://github.com/nsaph-software/CRE/workflows/R-CMD-check/badge.svg?branch=develop)](https://github.com/nsaph-software/CRE/actions)
+[![CRAN RStudio mirror downloads](https://cranlogs.r-pkg.org/badges/grand-total/CRE)](http://www.r-pkg.org/pkg/cre)
 [![codecov](https://codecov.io/gh/NSAPH-Software/CRE/branch/develop/graph/badge.svg?token=UMSVOYRKGA)](https://codecov.io/gh/NSAPH-Software/CRE)
 
 ---
@@ -69,6 +70,7 @@ Gaussian processes for the estimation of causal exposure-response curves (GPCERF
 
 [![](http://www.r-pkg.org/badges/version-last-release/GPCERF)](https://CRAN.R-project.org/package=GPCERF)
 [![R build status](https://github.com/NSAPH-Software/GPCERF/workflows/R-CMD-check/badge.svg?branch=develop)](https://github.com/NSAPH-Software/GPCERF/actions)
+[![CRAN RStudio mirror downloads](https://cranlogs.r-pkg.org/badges/grand-total/GPCERF)](http://www.r-pkg.org/pkg/gpcerf)
 [![codecov](https://codecov.io/gh/NSAPH-Software/GPCERF/branch/develop/graph/badge.svg?token=066ISL822N)](https://codecov.io/gh/NSAPH-Software/GPCERF)
 
 

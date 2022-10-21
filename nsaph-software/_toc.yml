@@ -6,7 +6,9 @@ root: intro
 parts:
   - caption: Research Gallery
     chapters:
-    - file: research_gallery/TBD.md
+    - file: research_gallery/index.md
+      sections:
+      - file: research_gallery/causalgps_example_1.md
   - caption: Developers Zone
     chapters:
     - file: developers_zone/faq.md

@@ -1,0 +1,506 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CausalGPS | Example 1 &#8212; NSAPH Software</title>
+    
+  <link href="../_static/css/theme.css" rel="stylesheet">
+  <link href="../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../_static/js/index.be7d3bbb2ef33a8344ce.js">
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Frequently Asked Questions" href="../developers_zone/faq.html" />
+    <link rel="prev" title="Research Gallery" href="index.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="../_static/NSAPH-Software-Logo_2.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">NSAPH Software</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../intro.html">
+   National Studies on Air Pollution and Health Software
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Research Gallery
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1 current active has-children">
+  <a class="reference internal" href="index.html">
+   Research Gallery
+  </a>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul class="current">
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
+     CausalGPS | Example 1
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Developers Zone
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../developers_zone/faq.html">
+   Frequently Asked Questions
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../developers_zone/contribution.html">
+   Contribution
+  </a>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../developers_zone/styling_guide.html">
+   Styling Guide
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../developers_zone/r.html">
+     R Styling Guide
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../developers_zone/python.html">
+     Python Styling Guide
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Blog Posts
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../blog_posts/renv_docker.html">
+   Setting Up A Reproducible Environment
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../blog_posts/R_embarrassingly_parallel.html">
+   Scaling Up/Out Embarrassingly Parallel Problems in R
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../blog_posts/use_R_package.html">
+   Using an R Package in an Ongoing Research
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../_sources/research_gallery/causalgps_example_1.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.md</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/NSAPH-Software/nsaph-software.github.io"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/NSAPH-Software/nsaph-software.github.io/issues/new?title=Issue%20on%20page%20%2Fresearch_gallery/causalgps_example_1.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        <a class="edit-button" href="https://github.com/NSAPH-Software/nsaph-software.github.io/edit/main/docs/research_gallery/causalgps_example_1.md"><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Edit this page"><i class="fas fa-pencil-alt"></i>suggest edit</button></a>
+    </div>
+</div>
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#matching-with-parametric-gps-model">
+   Matching with parametric GPS model
+  </a>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>CausalGPS | Example 1</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#matching-with-parametric-gps-model">
+   Matching with parametric GPS model
+  </a>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            
+              <div>
+                
+  <div class="tex2jax_ignore mathjax_ignore section" id="causalgps-example-1">
+<h1>CausalGPS | Example 1<a class="headerlink" href="#causalgps-example-1" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="matching-with-parametric-gps-model">
+<h2>Matching with parametric GPS model<a class="headerlink" href="#matching-with-parametric-gps-model" title="Permalink to this headline">¶</a></h2>
+<p>In this example, we will use the CausalGPS R package to generate pseudo population based on parametric GPS model. We use synthetic Medicare data that is available in the package. All processing are done in R.</p>
+<p>Step 1: Install and load the package</p>
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">install.packages</span><span class="p">(</span><span class="s">&quot;CausalGPS&quot;</span><span class="p">)</span>
+<span class="nf">library</span><span class="p">(</span><span class="n">CausalGPS</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Step 2: Load the data</p>
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">data</span><span class="p">(</span><span class="s">&quot;synthetic_us_2010&quot;</span><span class="p">,</span> <span class="n">package</span> <span class="o">=</span> <span class="s">&quot;CausalGPS&quot;</span><span class="p">)</span>
+<span class="n">synthetic_us_2010</span><span class="o">$</span><span class="n">cdc_mean_bmi</span><span class="p">[</span><span class="n">synthetic_us_2010</span><span class="o">$</span><span class="n">cdc_mean_bmi</span> <span class="o">&gt;</span> <span class="m">9000</span><span class="p">]</span> <span class="o">&lt;-</span> <span class="kc">NA</span>
+<span class="n">data</span> <span class="o">&lt;-</span> <span class="n">synthetic_us_2010</span>
+
+<span class="n">confounders_s1</span> <span class="o">&lt;-</span> <span class="nf">c</span><span class="p">(</span><span class="s">&quot;cs_poverty&quot;</span><span class="p">,</span><span class="s">&quot;cs_hispanic&quot;</span><span class="p">,</span>
+                    <span class="s">&quot;cs_black&quot;</span><span class="p">,</span>
+                    <span class="s">&quot;cs_ed_below_highschool&quot;</span><span class="p">,</span>
+                    <span class="s">&quot;cs_median_house_value&quot;</span><span class="p">,</span>
+                    <span class="s">&quot;cs_population_density&quot;</span><span class="p">,</span>
+                    <span class="s">&quot;cdc_mean_bmi&quot;</span><span class="p">,</span><span class="s">&quot;cdc_pct_nvsmoker&quot;</span><span class="p">,</span>
+                    <span class="s">&quot;gmet_mean_summer_tmmx&quot;</span><span class="p">,</span>
+                    <span class="s">&quot;gmet_mean_summer_rmx&quot;</span><span class="p">,</span>
+                    <span class="s">&quot;gmet_mean_summer_sph&quot;</span><span class="p">,</span>
+                    <span class="s">&quot;cms_female_pct&quot;</span><span class="p">,</span> <span class="s">&quot;region&quot;</span>
+<span class="p">)</span>
+
+<span class="n">data</span><span class="o">$</span><span class="n">region</span> <span class="o">&lt;-</span> <span class="nf">as.factor</span><span class="p">(</span><span class="n">data</span><span class="o">$</span><span class="n">region</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Step 3: Generate Pseudo Population</p>
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">set.seed</span><span class="p">(</span><span class="m">574</span><span class="p">)</span>
+<span class="n">ps_pop_obj_1</span> <span class="o">&lt;-</span> <span class="nf">generate_pseudo_pop</span><span class="p">(</span><span class="n">data</span><span class="o">$</span><span class="n">cms_mortality_pct</span><span class="p">,</span>
+                                    <span class="n">data</span><span class="o">$</span><span class="n">qd_mean_pm25</span><span class="p">,</span>
+                                    <span class="nf">data.frame</span><span class="p">(</span><span class="n">data</span><span class="p">[,</span> <span class="n">confounders_s1</span><span class="p">,</span> <span class="n">drop</span><span class="o">=</span><span class="kc">FALSE</span><span class="p">]),</span>
+                                    <span class="n">ci_appr</span> <span class="o">=</span> <span class="s">&quot;matching&quot;</span><span class="p">,</span>
+                                    <span class="n">gps_model</span> <span class="o">=</span> <span class="s">&quot;parametric&quot;</span><span class="p">,</span>
+                                    <span class="n">bin_seq</span> <span class="o">=</span> <span class="kc">NULL</span><span class="p">,</span>
+                                    <span class="n">trim_quantiles</span> <span class="o">=</span> <span class="nf">c</span><span class="p">(</span><span class="m">0.25</span> <span class="p">,</span>
+                                                       <span class="m">0.99</span><span class="p">),</span>
+                                    <span class="n">optimized_compile</span> <span class="o">=</span> <span class="kc">TRUE</span><span class="p">,</span>
+                                    <span class="n">use_cov_transform</span> <span class="o">=</span> <span class="kc">TRUE</span><span class="p">,</span>
+                                    <span class="n">sl_lib</span> <span class="o">=</span> <span class="nf">c</span><span class="p">(</span><span class="s">&quot;m_xgboost&quot;</span><span class="p">),</span>
+                                    <span class="n">params</span> <span class="o">=</span> <span class="nf">list</span><span class="p">(</span><span class="n">xgb_nrounds</span><span class="o">=</span><span class="nf">seq</span><span class="p">(</span><span class="m">10</span><span class="p">,</span><span class="m">60</span><span class="p">),</span>
+                                                  <span class="n">xgb_eta</span><span class="o">=</span><span class="nf">seq</span><span class="p">(</span><span class="m">0.04</span><span class="p">,</span> <span class="m">0.4</span><span class="p">,</span> <span class="m">0.02</span><span class="p">)),</span>
+                                    <span class="n">nthread</span> <span class="o">=</span> <span class="m">12</span><span class="p">,</span>
+                                    <span class="n">covar_bl_method</span> <span class="o">=</span> <span class="s">&quot;absolute&quot;</span><span class="p">,</span>
+                                    <span class="n">covar_bl_trs</span> <span class="o">=</span> <span class="m">0.1</span><span class="p">,</span>
+                                    <span class="n">covar_bl_trs_type</span><span class="o">=</span> <span class="s">&quot;maximal&quot;</span><span class="p">,</span>
+                                    <span class="n">max_attempt</span> <span class="o">=</span> <span class="m">10</span><span class="p">,</span>
+                                    <span class="n">matching_fun</span> <span class="o">=</span> <span class="s">&quot;matching_l1&quot;</span><span class="p">,</span>
+                                    <span class="n">delta_n</span> <span class="o">=</span> <span class="m">0.1</span><span class="p">,</span>
+                                    <span class="n">scale</span> <span class="o">=</span> <span class="m">1</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>In the previous code, we trimmed data using <code class="docutils literal notranslate"><span class="pre">trim_quantiles</span></code>. This helps to focus on common support range. <code class="docutils literal notranslate"><span class="pre">m_</span></code> in <code class="docutils literal notranslate"><span class="pre">m_xgboost</span></code> stands for modified xgboost library. So we can pass a range of hyperparameter with <code class="docutils literal notranslate"><span class="pre">xgb_</span></code> prefix. Covariate balance has 3 options including method (which only <code class="docutils literal notranslate"><span class="pre">absolute</span></code> has been implemented so far), threshold (<code class="docutils literal notranslate"><span class="pre">covar_bl_trs</span></code>) and threshold type (<code class="docutils literal notranslate"><span class="pre">covar_bl_trs_type</span></code>) which includes <code class="docutils literal notranslate"><span class="pre">mean</span></code>, <code class="docutils literal notranslate"><span class="pre">median</span></code>, and <code class="docutils literal notranslate"><span class="pre">maximal</span></code>. <code class="docutils literal notranslate"><span class="pre">max_attempt</span></code> is the maximum number of attempts to generate pseudo population. <code class="docutils literal notranslate"><span class="pre">matching_fun</span></code> is the matching function (only <code class="docutils literal notranslate"><span class="pre">matching_l1</span></code> has been implemented so far). <code class="docutils literal notranslate"><span class="pre">delta_n</span></code> is the size of caliper and <code class="docutils literal notranslate"><span class="pre">scale</span></code> is a specified scale parameter to control the relative weight that
+is attributed to the distance measures of the exposure versus the GPS.</p>
+<p>After 6 iterations, a covariate balance is achieved one can run summary to see the summary of the results.</p>
+<div class="highlight-{r, notranslate"><div class="highlight"><pre><span></span>summary(ps_pop_obj_1)
+</pre></div>
+</div>
+<div class="highlight-s notranslate"><div class="highlight"><pre><span></span><span class="o">---</span> <span class="n">CausalGPS</span> <span class="n">pseudo</span> <span class="n">population</span> <span class="n">object</span> <span class="n">summary</span> <span class="o">---</span> 
+<span class="n">Pseudo</span> <span class="n">population</span> <span class="n">met</span> <span class="n">the</span> <span class="n">covariate</span> <span class="n">balance</span> <span class="n">requirement</span><span class="o">:</span>  <span class="kc">TRUE</span> 
+<span class="n">Absolute</span> <span class="n">correlation</span> <span class="n">of</span> <span class="n">the</span> <span class="n">original</span> <span class="n">data</span><span class="o">:</span> 
+   <span class="n">mean</span><span class="o">:</span>     <span class="m">0.151</span> 
+   <span class="n">median</span><span class="o">:</span>   <span class="m">0.134</span> 
+   <span class="n">maximal</span><span class="o">:</span>  <span class="m">0.367</span> 
+
+ <span class="n">cs_poverty</span> <span class="o">:</span> <span class="m">0.084</span> 
+ <span class="n">cs_hispanic</span> <span class="o">:</span> <span class="m">0.134</span> 
+ <span class="n">cs_black</span> <span class="o">:</span> <span class="m">0.245</span> 
+ <span class="n">cs_ed_below_highschool</span> <span class="o">:</span> <span class="m">0.234</span> 
+ <span class="n">cs_median_house_value</span> <span class="o">:</span> <span class="m">0.085</span> 
+ <span class="n">cs_population_density</span> <span class="o">:</span> <span class="m">0.190</span> 
+ <span class="n">cdc_mean_bmi</span> <span class="o">:</span> <span class="m">0.047</span> 
+ <span class="n">cdc_pct_nvsmoker</span> <span class="o">:</span> <span class="m">0.020</span> 
+ <span class="n">gmet_mean_summer_tmmx</span> <span class="o">:</span> <span class="m">0.254</span> 
+ <span class="n">gmet_mean_summer_rmx</span> <span class="o">:</span> <span class="m">0.218</span> 
+ <span class="n">gmet_mean_summer_sph</span> <span class="o">:</span> <span class="m">0.367</span> 
+ <span class="n">cms_female_pct</span> <span class="o">:</span> <span class="m">0.003</span> 
+ <span class="n">region</span> <span class="o">:</span> <span class="m">0.078</span>
+
+ <span class="n">Absolute</span> <span class="n">correlation</span> <span class="n">of</span> <span class="n">the</span> <span class="n">pseudo</span> <span class="n">population</span><span class="o">:</span> 
+   <span class="n">mean</span><span class="o">:</span>     <span class="m">0.060</span> 
+   <span class="n">median</span><span class="o">:</span>   <span class="m">0.057</span> 
+   <span class="n">maximal</span><span class="o">:</span>  <span class="m">0.099</span> 
+
+ <span class="n">cs_poverty</span> <span class="o">:</span> <span class="m">0.079</span> 
+ <span class="n">cs_hispanic</span> <span class="o">:</span> <span class="m">0.025</span> 
+ <span class="n">cs_median_house_value</span> <span class="o">:</span> <span class="m">0.003</span> 
+ <span class="n">cdc_mean_bmi</span> <span class="o">:</span> <span class="m">0.057</span> 
+ <span class="n">cdc_pct_nvsmoker</span> <span class="o">:</span> <span class="m">0.035</span> 
+ <span class="n">gmet_mean_summer_tmmx</span> <span class="o">:</span> <span class="m">0.096</span> 
+ <span class="n">gmet_mean_summer_sph</span> <span class="o">:</span> <span class="m">0.055</span> 
+ <span class="n">cms_female_pct</span> <span class="o">:</span> <span class="m">0.072</span> 
+ <span class="n">cs_black</span> <span class="o">:</span> <span class="m">0.099</span> 
+ <span class="n">cs_ed_below_highschool</span> <span class="o">:</span> <span class="m">0.089</span> 
+ <span class="n">cs_population_density</span> <span class="o">:</span> <span class="m">0.087</span> 
+ <span class="n">gmet_mean_summer_rmx</span> <span class="o">:</span> <span class="m">0.047</span> 
+ <span class="n">region</span> <span class="o">:</span> <span class="m">0.031</span>
+
+ <span class="n">Hyperparameters</span> <span class="n">used</span> <span class="n">for</span> <span class="n">the</span> <span class="n">select</span> <span class="n">population</span><span class="o">:</span>
+ <span class="n">xgb_nrounds</span> <span class="o">:</span> <span class="m">21</span> 
+ <span class="n">xgb_max_depth</span> <span class="o">:</span> <span class="m">6</span> 
+ <span class="n">xgb_eta</span> <span class="o">:</span> <span class="m">0.32</span> 
+ <span class="n">xgb_min_child_weight</span> <span class="o">:</span> <span class="m">1</span> 
+ <span class="n">xgb_verbose</span> <span class="o">:</span> <span class="m">0</span>
+
+<span class="n">Number</span> <span class="n">of</span> <span class="n">data</span> <span class="n">samples</span><span class="o">:</span>  <span class="m">2299</span> 
+<span class="n">Number</span> <span class="n">of</span> <span class="n">iterations</span><span class="o">:</span>  <span class="m">6</span> 
+<span class="o">---</span> <span class="o">***</span> <span class="o">---</span> 
+</pre></div>
+</div>
+<p>It is important to note that the package ignores any data with missing values. As a result, number of data samples are different from the original data. We can also plot the covariate balance.</p>
+<div class="figure align-default" id="covariate-balance">
+<a class="reference internal image-reference" href="../_images/example_w_1_covar.pdf"><img alt="../_images/example_w_1_covar.pdf" src="../_images/example_w_1_covar.pdf" style="height: 600px;" /></a>
+</div>
+<p>Now, we can conduct the analysis using the pseudo population.</p>
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">set.seed</span><span class="p">(</span><span class="m">168</span><span class="p">)</span>
+<span class="n">erf</span> <span class="o">&lt;-</span> <span class="nf">estimate_npmetric_erf</span><span class="p">(</span><span class="n">m_Y</span> <span class="o">=</span> <span class="n">ps_pop_obj_1</span><span class="o">$</span><span class="n">pseudo_pop</span><span class="o">$</span><span class="n">Y</span><span class="p">,</span>
+                             <span class="n">m_w</span> <span class="o">=</span> <span class="n">ps_pop_obj_1</span><span class="o">$</span><span class="n">pseudo_pop</span><span class="o">$</span><span class="n">w</span><span class="p">,</span>
+                             <span class="n">counter_weight</span> <span class="o">=</span> <span class="n">ps_pop_obj_1</span><span class="o">$</span><span class="n">pseudo_pop</span><span class="o">$</span><span class="n">counter_weight</span><span class="p">,</span>
+                             <span class="n">bw_seq</span> <span class="o">=</span> <span class="nf">seq</span><span class="p">(</span><span class="m">0.2</span><span class="p">,</span><span class="m">10</span><span class="p">,</span><span class="m">0.05</span><span class="p">),</span>
+                             <span class="n">w_vals</span> <span class="o">=</span> <span class="nf">seq</span><span class="p">(</span><span class="m">7</span><span class="p">,</span><span class="m">13</span><span class="p">,</span> <span class="m">0.05</span><span class="p">),</span>
+                             <span class="n">nthread</span> <span class="o">=</span> <span class="m">12</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>The <code class="docutils literal notranslate"><span class="pre">erf</span></code> object contains the estimated exposure-response function. The following plot shows the exposure function.</p>
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">plot</span><span class="p">(</span><span class="n">erf</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="figure align-default">
+<img alt="../_images/example_w_1_erf.pdf" src="../_images/example_w_1_erf.pdf" />
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./research_gallery"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            
+                <!-- Previous / next buttons -->
+<div class='prev-next-area'> 
+    <a class='left-prev' id="prev-link" href="index.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">Research Gallery</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="../developers_zone/faq.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Frequently Asked Questions</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+            
+        </div>
+    </div>
+    <footer class="footer">
+  <p>
+    
+      By NSAPH Software Developing Team<br/>
+    
+        &copy; Copyright 2022.<br/>
+  </p>
+</footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+
+  </body>
+</html>
