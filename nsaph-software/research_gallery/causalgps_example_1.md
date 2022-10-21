@@ -125,7 +125,7 @@ Number of iterations:  6
 
 It is important to note that the package ignores any data with missing values. As a result, number of data samples are different from the original data. We can also plot the covariate balance. 
 
-```{figure} figures/pdf/example_w_1_covar.pdf
+```{figure} figures/png/example_w_1_covar.png
 ---
 height: 600 px
 name: Covariate Balance
@@ -149,8 +149,7 @@ The `erf` object contains the estimated exposure-response function. The followin
 plot(erf)
 ```
 
-```{figure} figures/pdf/example_w_1_erf.pdf
-
+```{figure} figures/png/example_w_1_erf.png
 ---
 height: 400 px
 name: Exposure Response Function
