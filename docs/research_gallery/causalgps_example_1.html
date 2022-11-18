@@ -364,7 +364,7 @@ const thebe_selector_output = ".output, .cell_output"
 <p>In the previous code, we trimmed data using <code class="docutils literal notranslate"><span class="pre">trim_quantiles</span></code>. This helps to focus on common support range. <code class="docutils literal notranslate"><span class="pre">m_</span></code> in <code class="docutils literal notranslate"><span class="pre">m_xgboost</span></code> stands for modified xgboost library. So we can pass a range of hyperparameter with <code class="docutils literal notranslate"><span class="pre">xgb_</span></code> prefix. Covariate balance has 3 options including method (which only <code class="docutils literal notranslate"><span class="pre">absolute</span></code> has been implemented so far), threshold (<code class="docutils literal notranslate"><span class="pre">covar_bl_trs</span></code>) and threshold type (<code class="docutils literal notranslate"><span class="pre">covar_bl_trs_type</span></code>) which includes <code class="docutils literal notranslate"><span class="pre">mean</span></code>, <code class="docutils literal notranslate"><span class="pre">median</span></code>, and <code class="docutils literal notranslate"><span class="pre">maximal</span></code>. <code class="docutils literal notranslate"><span class="pre">max_attempt</span></code> is the maximum number of attempts to generate pseudo population. <code class="docutils literal notranslate"><span class="pre">matching_fun</span></code> is the matching function (only <code class="docutils literal notranslate"><span class="pre">matching_l1</span></code> has been implemented so far). <code class="docutils literal notranslate"><span class="pre">delta_n</span></code> is the size of caliper and <code class="docutils literal notranslate"><span class="pre">scale</span></code> is a specified scale parameter to control the relative weight that
 is attributed to the distance measures of the exposure versus the GPS.</p>
 <p>After 6 iterations, a covariate balance is achieved one can run summary to see the summary of the results.</p>
-<div class="highlight-{r, notranslate"><div class="highlight"><pre><span></span>summary(ps_pop_obj_1)
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">summary</span><span class="p">(</span><span class="n">ps_pop_obj_1</span><span class="p">)</span>
 </pre></div>
 </div>
 <div class="highlight-s notranslate"><div class="highlight"><pre><span></span><span class="o">---</span> <span class="n">CausalGPS</span> <span class="n">pseudo</span> <span class="n">population</span> <span class="n">object</span> <span class="n">summary</span> <span class="o">---</span> 
@@ -432,13 +432,6 @@ is attributed to the distance measures of the exposure versus the GPS.</p>
                              <span class="n">w_vals</span> <span class="o">=</span> <span class="nf">seq</span><span class="p">(</span><span class="m">7</span><span class="p">,</span><span class="m">13</span><span class="p">,</span> <span class="m">0.05</span><span class="p">),</span>
                              <span class="n">nthread</span> <span class="o">=</span> <span class="m">12</span><span class="p">)</span>
 </pre></div>
-</div>
-<p>The <code class="docutils literal notranslate"><span class="pre">erf</span></code> object contains the estimated exposure-response function. The following plot shows the exposure function.</p>
-<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">plot</span><span class="p">(</span><span class="n">erf</span><span class="p">)</span>
-</pre></div>
-</div>
-<div class="figure align-default" id="exposure-response-function">
-<a class="reference internal image-reference" href="../_images/example_w_1_erf.png"><img alt="../_images/example_w_1_erf.png" src="../_images/example_w_1_erf.png" style="height: 400px;" /></a>
 </div>
 </div>
 </div>

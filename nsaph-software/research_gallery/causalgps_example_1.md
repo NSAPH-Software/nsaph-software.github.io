@@ -65,7 +65,7 @@ is attributed to the distance measures of the exposure versus the GPS.
 
 After 6 iterations, a covariate balance is achieved one can run summary to see the summary of the results. 
 
-```{r, eval=FALSE}
+```r
 summary(ps_pop_obj_1)
 ```
 
@@ -141,16 +141,4 @@ erf <- estimate_npmetric_erf(m_Y = ps_pop_obj_1$pseudo_pop$Y,
                              bw_seq = seq(0.2,10,0.05),
                              w_vals = seq(7,13, 0.05),
                              nthread = 12)
-```
-
-The `erf` object contains the estimated exposure-response function. The following plot shows the exposure function. 
-
-```r
-plot(erf)
-```
-
-```{figure} figures/png/example_w_1_erf.png
----
-height: 400 px
-name: Exposure Response Function
 ```
