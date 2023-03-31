@@ -29,17 +29,20 @@ Matching on generalized propensity scores with continuous exposures
 
 
 ---
-**[pycausalgps](https://github.com/fasrc/pycausalgps/)**
+**[GPCERF](https://github.com/NSAPH-Software/GPCERF)**
 ^^^
 
-```{figure} figures/svg/causalgps_logo_python.svg
+```{figure} figures/svg/gpcerf_logo.svg
 :height: 100px
-:name: pycausalgps
+:name: gpcerf
 ```
 
-Matching on generalized propensity scores with continuous exposures (Python Package)
+Gaussian processes for the estimation of causal exposure-response curves (GPCERF)
 
-[![PyPI version](https://img.shields.io/pypi/v/pycausalgps.svg)](https://pypi.org/project/pycausalgps)
+[![](http://www.r-pkg.org/badges/version-last-release/GPCERF)](https://CRAN.R-project.org/package=GPCERF)
+[![R build status](https://github.com/NSAPH-Software/GPCERF/workflows/R-CMD-check/badge.svg?branch=develop)](https://github.com/NSAPH-Software/GPCERF/actions)
+[![CRAN RStudio mirror downloads](https://cranlogs.r-pkg.org/badges/grand-total/GPCERF)](http://www.r-pkg.org/pkg/gpcerf)
+[![codecov](https://codecov.io/gh/NSAPH-Software/GPCERF/branch/develop/graph/badge.svg?token=066ISL822N)](https://codecov.io/gh/NSAPH-Software/GPCERF)
 
 ---
 **[CRE](https://github.com/NSAPH-Software/CRE/)**
@@ -58,22 +61,35 @@ Interpretable Subgroups Identification through Ensemble Learning of Causal Rules
 [![codecov](https://codecov.io/gh/NSAPH-Software/CRE/branch/develop/graph/badge.svg?token=UMSVOYRKGA)](https://codecov.io/gh/NSAPH-Software/CRE)
 
 ---
-**[GPCERF](https://github.com/NSAPH-Software/GPCERF)**
+**[nsaphx](https://github.com/nsaph-software/nsaphx/)**
 ^^^
 
-```{figure} figures/svg/gpcerf_logo.svg
+```{figure} figures/svg/nsaphx_logo.svg
 :height: 100px
-:name: gpcerf
+:name: nsaphx
 ```
 
-Gaussian processes for the estimation of causal exposure-response curves (GPCERF)
+Reproducible Causal Inference Studies
 
-[![](http://www.r-pkg.org/badges/version-last-release/GPCERF)](https://CRAN.R-project.org/package=GPCERF)
-[![R build status](https://github.com/NSAPH-Software/GPCERF/workflows/R-CMD-check/badge.svg?branch=develop)](https://github.com/NSAPH-Software/GPCERF/actions)
-[![CRAN RStudio mirror downloads](https://cranlogs.r-pkg.org/badges/grand-total/GPCERF)](http://www.r-pkg.org/pkg/gpcerf)
-[![codecov](https://codecov.io/gh/NSAPH-Software/GPCERF/branch/develop/graph/badge.svg?token=066ISL822N)](https://codecov.io/gh/NSAPH-Software/GPCERF)
+[![PyPI version](https://img.shields.io/pypi/v/nsaphx.svg)](https://pypi.org/project/nsaphx)
+[![codecov](https://codecov.io/gh/NSAPH-Software/nsaphx/branch/develop/graph/badge.svg?token=8aSueNmHZN)](https://codecov.io/gh/NSAPH-Software/nsaphx)
+[![Test Status](https://github.com/nsaph-software/pycausalgps/workflows/Python%20package/badge.svg?branch=develop&event=push)](https://github.com/nsaph-software/pycausalgps/actions)
 
 
+
+
+---
+**[pycausalgps](https://github.com/nsaph-software/pycausalgps/)**
+^^^
+
+```{figure} figures/svg/causalgps_logo_python.svg
+:height: 100px
+:name: pycausalgps
+```
+
+Matching on generalized propensity scores with continuous exposures (Python Package)
+
+[![PyPI version](https://img.shields.io/pypi/v/pycausalgps.svg)](https://pypi.org/project/pycausalgps)
 ---
 
 **[CCIT](https://github.com/NSAPH-Software/CCIT)**
@@ -87,19 +103,3 @@ Gaussian processes for the estimation of causal exposure-response curves (GPCERF
 Continuous Causal Interaction Tree
 
 [![](http://www.r-pkg.org/badges/version-last-release/CCIT)](http://www.r-pkg.org/pkg/ccit)
-
----
-
-**[NSAPHUtils](https://github.com/NSAPH-Software/NSAPHutils)**
-^^^
-
-```{figure} figures/svg/nsaphutils_logo.svg
-:height: 100px
-:name: nsaphutils
-```
-
-Utility R functions and tools for working with data in NSAPH research
-
-[![](http://www.r-pkg.org/badges/version-last-release/CCIT)](http://www.r-pkg.org/pkg/ccit)
-
-````
