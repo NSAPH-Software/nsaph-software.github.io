@@ -90,16 +90,3 @@ Reproducible Causal Inference Studies
 Matching on generalized propensity scores with continuous exposures (Python Package)
 
 [![PyPI version](https://img.shields.io/pypi/v/pycausalgps.svg)](https://pypi.org/project/pycausalgps)
----
-
-**[CCIT](https://github.com/NSAPH-Software/CCIT)**
-^^^
-
-```{figure} figures/svg/place_holder.svg
-:height: 100px
-:name: ccit
-```
-
-Continuous Causal Interaction Tree
-
-[![](http://www.r-pkg.org/badges/version-last-release/CCIT)](http://www.r-pkg.org/pkg/ccit)
