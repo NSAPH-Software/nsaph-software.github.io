@@ -1,37 +1,45 @@
 
+
 <!DOCTYPE html>
 
-<html>
+
+<html >
+
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
     <title>Setting Up A Reproducible Environment &#8212; NSAPH Software</title>
-    
-  <link href="../_static/css/theme.css" rel="stylesheet">
-  <link href="../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
 
-    
-  <link rel="stylesheet"
-    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
-  <link rel="preload" as="font" type="font/woff2" crossorigin
-    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
-  <link rel="preload" as="font" type="font/woff2" crossorigin
-    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+  
+  <link href="../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
 
-    
-      
-
-    
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
-    
-  <link rel="preload" as="script" href="../_static/js/index.be7d3bbb2ef33a8344ce.js">
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
 
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
@@ -39,349 +47,369 @@
     <script src="../_static/doctools.js"></script>
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
     <script src="../_static/togglebutton.js"></script>
-    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
-    <script src="../_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../_static/design-tabs.js"></script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
 const thebe_selector = ".thebe,.cell"
 const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'blog_posts/renv_docker';</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Scaling Up/Out Embarrassingly Parallel Problems in R" href="R_embarrassingly_parallel.html" />
     <link rel="prev" title="Python Styling Guide" href="../developers_zone/python.html" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="docsearch:language" content="None">
-    
-
-    <!-- Google Analytics -->
-    
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="None"/>
   </head>
-  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
-    
-    <div class="container-fluid" id="banner"></div>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
 
-    
-
-    <div class="container-xl">
-      <div class="row">
-          
-<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
-    
-        <div class="navbar-brand-box">
-    <a class="navbar-brand text-wrap" href="../index.html">
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
       
-        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+      <div class="bd-sidebar-primary bd-sidebar">
         
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+  
+
+<a class="navbar-brand logo" href="../intro.html">
+  
+  
+  
+  
+    
+    
       
-      
-      <img src="../_static/NSAPH-Software-Logo_2.png" class="logo" alt="logo">
-      
-      
-      <h1 class="site-logo" id="site-title">NSAPH Software</h1>
-      
-    </a>
-</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
-  <i class="icon fas fa-search"></i>
-  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
-</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
-    <div class="bd-toc-item active">
-        <ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="../intro.html">
-   National Studies on Air Pollution and Health Software
-  </a>
- </li>
-</ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Research Gallery
- </span>
-</p>
+    
+    
+    <img src="../_static/NSAPH-Software-Logo_2.png" class="logo__image only-light" alt="Logo image"/>
+    <script>document.write(`<img src="../_static/NSAPH-Software-Logo_2.png" class="logo__image only-dark" alt="Logo image"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../intro.html">
+                    National Studies on Air Pollution and Health Software
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Research Gallery</span></p>
 <ul class="nav bd-sidenav">
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../research_gallery/index.html">
-   Research Gallery
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
-  <label for="toctree-checkbox-1">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../research_gallery/causalgps_example_1.html">
-     CausalGPS | Example 1
-    </a>
-   </li>
-  </ul>
- </li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../research_gallery/index.html">Research Gallery</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../research_gallery/causalgps_example_1.html">CausalGPS | Example 1</a></li>
 </ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Developers Zone
- </span>
-</p>
+</li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Developers Zone</span></p>
 <ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="../developers_zone/faq.html">
-   Frequently Asked Questions
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../developers_zone/contribution.html">
-   Contribution
-  </a>
- </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../developers_zone/styling_guide.html">
-   Styling Guide
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
-  <label for="toctree-checkbox-2">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../developers_zone/r.html">
-     R Styling Guide
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../developers_zone/python.html">
-     Python Styling Guide
-    </a>
-   </li>
-  </ul>
- </li>
+<li class="toctree-l1"><a class="reference internal" href="../developers_zone/faq.html">Frequently Asked Questions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../developers_zone/contribution.html">Contribution</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../developers_zone/styling_guide.html">Styling Guide</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../developers_zone/r.html">R Styling Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../developers_zone/python.html">Python Styling Guide</a></li>
 </ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Blog Posts
- </span>
-</p>
+</li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Blog Posts</span></p>
 <ul class="current nav bd-sidenav">
- <li class="toctree-l1 current active">
-  <a class="current reference internal" href="#">
-   Setting Up A Reproducible Environment
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="R_embarrassingly_parallel.html">
-   Scaling Up/Out Embarrassingly Parallel Problems in R
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="use_R_package.html">
-   Using an R Package in an Ongoing Research
-  </a>
- </li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Setting Up A Reproducible Environment</a></li>
+<li class="toctree-l1"><a class="reference internal" href="R_embarrassingly_parallel.html">Scaling Up/Out Embarrassingly Parallel Problems in R</a></li>
+<li class="toctree-l1"><a class="reference internal" href="use_R_package.html">Using an R Package in an Ongoing Research</a></li>
 </ul>
 
     </div>
-</nav> <!-- To handle the deprecated key -->
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
 
-</div>
 
-
-          
-
-
-          
-<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
-    
-    <div class="topbar container-xl fixed-top">
-    <div class="topbar-contents row">
-        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
-        <div class="col pl-md-4 topbar-main">
-            
-            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
-                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
-                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
-                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
-                <i class="fas fa-bars"></i>
-                <i class="fas fa-arrow-left"></i>
-                <i class="fas fa-arrow-up"></i>
-            </button>
-            
-            
-<div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
-            class="fas fa-download"></i></button>
-
-    <div class="dropdown-buttons">
-        <!-- ipynb file if we had a myst markdown file -->
+      </div>
+      
+      <main id="main-content" class="bd-main">
         
-        <!-- Download raw file -->
-        <a class="dropdown-buttons" href="../_sources/blog_posts/renv_docker.md"><button type="button"
-                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
-                data-placement="left">.md</button></a>
-        <!-- Download PDF via print -->
-        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
-                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
     </div>
-</div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
 
-            <!-- Source interaction buttons -->
+<div class="article-header-buttons">
 
-<div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
-        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
-    <div class="dropdown-buttons sourcebuttons">
-        <a class="repository-button"
-            href="https://github.com/NSAPH-Software/nsaph-software.github.io"><button type="button" class="btn btn-secondary topbarbtn"
-                data-toggle="tooltip" data-placement="left" title="Source repository"><i
-                    class="fab fa-github"></i>repository</button></a>
-        <a class="issues-button"
-            href="https://github.com/NSAPH-Software/nsaph-software.github.io/issues/new?title=Issue%20on%20page%20%2Fblog_posts/renv_docker.html&body=Your%20issue%20content%20here."><button
-                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
-                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
-        <a class="edit-button" href="https://github.com/NSAPH-Software/nsaph-software.github.io/edit/main/docs/blog_posts/renv_docker.md"><button
-                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
-                title="Edit this page"><i class="fas fa-pencil-alt"></i>suggest edit</button></a>
-    </div>
-</div>
 
-            <!-- Full screen (wrap in <a> to have style consistency -->
 
-<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
-        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
-        title="Fullscreen mode"><i
-            class="fas fa-expand"></i></button></a>
 
-            <!-- Launch buttons -->
 
-        </div>
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/NSAPH-Software/nsaph-software.github.io" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
 
-        <!-- Table of contents -->
-        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
-            
-            <div class="tocsection onthispage pt-5 pb-3">
-                <i class="fas fa-list"></i> Contents
-            </div>
-            <nav id="bd-toc-nav" aria-label="Page">
-                <ul class="visible nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#overview">
-   Overview
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#managing-package-dependencies">
-   Managing Package Dependencies
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#creating-a-project-folder">
-     Creating A Project Folder
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#initializing-renv">
-     Initializing renv
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#creating-other-porjects-folders">
-     Creating Other Porjects Folders
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#installing-a-package-with-a-different-version">
-     Installing A Package with A Different Version
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#double-checking-the-environments">
-     Double-checking the Environments
-    </a>
-   </li>
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/NSAPH-Software/nsaph-software.github.io/edit/main/docs/blog_posts/renv_docker.md" target="_blank"
+   class="btn btn-sm btn-source-edit-button dropdown-item"
+   title="Suggest edit"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-pencil-alt"></i>
+  </span>
+<span class="btn__text-container">Suggest edit</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/NSAPH-Software/nsaph-software.github.io/issues/new?title=Issue%20on%20page%20%2Fblog_posts/renv_docker.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
   </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#managing-system-dependencies">
-   Managing System Dependencies
-  </a>
- </li>
-</ul>
+</div>
 
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/blog_posts/renv_docker.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+<script>
+document.write(`
+  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  </button>
+`);
+</script>
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Setting Up A Reproducible Environment</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#overview">Overview</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#managing-package-dependencies">Managing Package Dependencies</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#creating-a-project-folder">Creating A Project Folder</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#initializing-renv">Initializing renv</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#creating-other-porjects-folders">Creating Other Porjects Folders</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#installing-a-package-with-a-different-version">Installing A Package with A Different Version</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#double-checking-the-environments">Double-checking the Environments</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#managing-system-dependencies">Managing System Dependencies</a></li>
+</ul>
             </nav>
         </div>
     </div>
 </div>
-    <div id="main-content" class="row">
-        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
-            <!-- Table of contents that is only displayed when printing the page -->
-            <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Setting Up A Reproducible Environment</h1>
-                <!-- Table of contents -->
-                <div id="print-main-content">
-                    <div id="jb-print-toc">
-                        
-                        <div>
-                            <h2> Contents </h2>
-                        </div>
-                        <nav aria-label="Page">
-                            <ul class="visible nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#overview">
-   Overview
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#managing-package-dependencies">
-   Managing Package Dependencies
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#creating-a-project-folder">
-     Creating A Project Folder
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#initializing-renv">
-     Initializing renv
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#creating-other-porjects-folders">
-     Creating Other Porjects Folders
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#installing-a-package-with-a-different-version">
-     Installing A Package with A Different Version
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#double-checking-the-environments">
-     Double-checking the Environments
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#managing-system-dependencies">
-   Managing System Dependencies
-  </a>
- </li>
-</ul>
 
-                        </nav>
-                    </div>
-                </div>
-            </div>
-            
-              <div>
+              
                 
-  <div class="tex2jax_ignore mathjax_ignore section" id="setting-up-a-reproducible-environment">
-<span id="setting-rep-env"></span><h1>Setting Up A Reproducible Environment<a class="headerlink" href="#setting-up-a-reproducible-environment" title="Permalink to this headline">¶</a></h1>
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="setting-up-a-reproducible-environment">
+<span id="setting-rep-env"></span><h1>Setting Up A Reproducible Environment<a class="headerlink" href="#setting-up-a-reproducible-environment" title="Permalink to this headline">#</a></h1>
 <ul class="simple">
 <li><p>By: Naeem Khoshnevis</p></li>
 <li><p>Last Update: May 22, 2022</p></li>
@@ -393,17 +421,19 @@ const thebe_selector_output = ".output, .cell_output"
 <li><p><a class="reference external" href="https://www.rstudio.com">RStudio</a>, and</p></li>
 <li><p><a class="reference external" href="https://rstudio.github.io/renv/articles/renv.html">renv</a></p></li>
 </ul>
-<div class="figure align-default" id="reproducible-env">
+<figure class="align-default" id="reproducible-env">
 <a class="reference internal image-reference" href="../_images/docker_rstudio_renv.png"><img alt="../_images/docker_rstudio_renv.png" src="../_images/docker_rstudio_renv.png" style="height: 80px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 1 </span><span class="caption-text">Three major components of building a reproducible developing environment.</span><a class="headerlink" href="#reproducible-env" title="Permalink to this image">¶</a></p>
-</div>
+<figcaption>
+<p><span class="caption-number">Fig. 1 </span><span class="caption-text">Three major components of building a reproducible developing environment.</span><a class="headerlink" href="#reproducible-env" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>Have an idea to improve this page? Let’s <a class="reference external" href="https://github.com/orgs/NSAPH-Software/discussions">discuss</a> it.</p>
 </div>
 <p>In the following, we will work on three packages, with different dependencies.</p>
-<div class="section" id="overview">
-<h2>Overview<a class="headerlink" href="#overview" title="Permalink to this headline">¶</a></h2>
+<section id="overview">
+<h2>Overview<a class="headerlink" href="#overview" title="Permalink to this headline">#</a></h2>
 <p>Reproducibility can be divided into three major parts:</p>
 <ul class="simple">
 <li><p><strong>System-level</strong>, that includes (read <a class="reference external" href="https://rstudio.github.io/renv/articles/docker.html">more</a>):</p>
@@ -418,9 +448,9 @@ const thebe_selector_output = ".output, .cell_output"
 <li><p><strong>Code level</strong>, which includes defining initial values of the pseudorandom number generator.</p></li>
 </ul>
 <p>The containerization platforms (e.g., Docker or Singularity) can be used to address the system-level isolation and reproducibility. Package managers (e.g., renv or conda) can manage different package dependencies and versions. The developers should address code-level reproducibility (also known as setting a seed value) while writing the code. We will not discuss this in this post. Please see this <a class="reference external" href="https://github.com/orgs/NSAPH-Software/discussions/1">discussion</a> for more details.</p>
-</div>
-<div class="section" id="managing-package-dependencies">
-<span id="manage-package-dep"></span><h2>Managing Package Dependencies<a class="headerlink" href="#managing-package-dependencies" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="managing-package-dependencies">
+<span id="manage-package-dep"></span><h2>Managing Package Dependencies<a class="headerlink" href="#managing-package-dependencies" title="Permalink to this headline">#</a></h2>
 <p>To manage the package dependencies, we use the <a class="reference external" href="https://rstudio.github.io/renv/index.html">renv</a> R package. Please read the renv vignettes for more details. In summary:</p>
 <ul class="simple">
 <li><p>Each folder is a project.</p></li>
@@ -431,13 +461,15 @@ const thebe_selector_output = ".output, .cell_output"
 <li><p>Each user has one (or more) global package cache, which is shared across all projects. So you do not need to install one package several times for different projects (Isn’t that amazing!?)</p></li>
 </ul>
 <p>Let’s go to our running example; we assume we are working with only one R version. <a class="reference internal" href="#renv-projects"><span class="std std-numref">Fig. 2</span></a> represents an overview of the projects, their files, and folders.</p>
-<div class="figure align-default" id="renv-projects">
+<figure class="align-default" id="renv-projects">
 <a class="reference internal image-reference" href="../_images/post_1_renv_figure_2.png"><img alt="projects" src="../_images/post_1_renv_figure_2.png" style="width: 80%;" /></a>
-<p class="caption"><span class="caption-number">Fig. 2 </span><span class="caption-text">An overview of three projects and a global cache folder for the packages. The renv package will generate the symlinks.</span><a class="headerlink" href="#renv-projects" title="Permalink to this image">¶</a></p>
-</div>
+<figcaption>
+<p><span class="caption-number">Fig. 2 </span><span class="caption-text">An overview of three projects and a global cache folder for the packages. The renv package will generate the symlinks.</span><a class="headerlink" href="#renv-projects" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
 <p>A folder (e.g., <code class="docutils literal notranslate"><span class="pre">Project_A</span></code>) with a <code class="docutils literal notranslate"><span class="pre">DESCRIPTION</span></code> file can be used as a simple example of handling dependencies. To reproduce the example, please follow the steps in the following section.</p>
-<div class="section" id="creating-a-project-folder">
-<span id="create-a-project"></span><h3>Creating A Project Folder<a class="headerlink" href="#creating-a-project-folder" title="Permalink to this headline">¶</a></h3>
+<section id="creating-a-project-folder">
+<span id="create-a-project"></span><h3>Creating A Project Folder<a class="headerlink" href="#creating-a-project-folder" title="Permalink to this headline">#</a></h3>
 <ul>
 <li><p>Make sure you have RStudio installed on your system (you can install it from <a class="reference external" href="https://www.rstudio.com/products/rstudio/download/">here</a>).</p></li>
 <li><p>Open Rstudio and install the <code class="docutils literal notranslate"><span class="pre">devtools</span></code> and the <code class="docutils literal notranslate"><span class="pre">renv</span></code> packages.</p>
@@ -448,13 +480,13 @@ const thebe_selector_output = ".output, .cell_output"
 </li>
 <li><p>Create the <code class="docutils literal notranslate"><span class="pre">Project_A</span></code> folder.</p></li>
 <li><p>Inside the folder, create a <code class="docutils literal notranslate"><span class="pre">DESCRIPTION</span></code> file with the following content.</p>
-<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>Package: Project_A
-Type: project
-Version: <span class="m">0</span>.0.1
-Description: Project_A Description.
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>Package:<span class="w"> </span>Project_A
+Type:<span class="w"> </span>project
+Version:<span class="w"> </span><span class="m">0</span>.0.1
+Description:<span class="w"> </span>Project_A<span class="w"> </span>Description.
 Depends:
-  BART<span class="o">(==</span> <span class="m">2</span>.2<span class="o">)</span>,
-  logger
+<span class="w">  </span>BART<span class="o">(==</span><span class="w"> </span><span class="m">2</span>.2<span class="o">)</span>,
+<span class="w">  </span>logger
 </pre></div>
 </div>
 </li>
@@ -467,9 +499,9 @@ Depends:
 <ul class="simple">
 <li><p>If you have not already installed <code class="docutils literal notranslate"><span class="pre">BART</span></code> and <code class="docutils literal notranslate"><span class="pre">logger</span></code> packages in your system, this command will raise an error. For example, in the case of <code class="docutils literal notranslate"><span class="pre">BART</span></code>, it will show the following error:</p></li>
 </ul>
-<div class="highlight-s notranslate"><div class="highlight"><pre><span></span>ℹ <span class="n">Loading</span> <span class="n">Project_A</span>
-<span class="n">Error</span> <span class="n">in</span> <span class="n">`abort_for_missing_packages()`</span><span class="o">:</span>
-<span class="o">!</span> <span class="n">Dependency</span> <span class="nf">package</span><span class="p">(</span><span class="n">s</span><span class="p">)</span> <span class="s">&#39;BART&#39;</span> <span class="n">not</span> <span class="n">available.</span>
+<div class="highlight-s notranslate"><div class="highlight"><pre><span></span>ℹ<span class="w"> </span><span class="n">Loading</span><span class="w"> </span><span class="n">Project_A</span>
+<span class="n">Error</span><span class="w"> </span><span class="n">in</span><span class="w"> </span><span class="n">`abort_for_missing_packages()`</span><span class="o">:</span>
+<span class="o">!</span><span class="w"> </span><span class="n">Dependency</span><span class="w"> </span><span class="nf">package</span><span class="p">(</span><span class="n">s</span><span class="p">)</span><span class="w"> </span><span class="s">&#39;BART&#39;</span><span class="w"> </span><span class="n">not</span><span class="w"> </span><span class="n">available.</span>
 </pre></div>
 </div>
 </li>
@@ -487,9 +519,9 @@ Please note that we have not used <code class="docutils literal notranslate"><sp
 <p class="admonition-title">Note</p>
 <p>Each R package can come with different dependencies. For example, in the case of the <strong>Bart</strong> package it will install <strong>nlme</strong>, <strong>nnet</strong>, <strong>survival</strong>, and any other required dependencies. In this post, we are only discussing direct dependencies.</p>
 </div>
-</div>
-<div class="section" id="initializing-renv">
-<h3>Initializing renv<a class="headerlink" href="#initializing-renv" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="initializing-renv">
+<h3>Initializing renv<a class="headerlink" href="#initializing-renv" title="Permalink to this headline">#</a></h3>
 <p>We successfully created an R project with two dependencies in the previous section. We have also installed the required packages. Now, we can use <code class="docutils literal notranslate"><span class="pre">renv</span></code> to take a snapshot of the current environment for future restores.</p>
 <div class="admonition attention">
 <p class="admonition-title">Attention</p>
@@ -499,7 +531,7 @@ Please note that we have not used <code class="docutils literal notranslate"><sp
 <li><p>Open the project in RStudio.</p></li>
 <li><p>Set a path for your global cache folder.</p></li>
 </ul>
-<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">Sys.setenv</span><span class="p">(</span><span class="n">RENV_PATHS_CACHE</span> <span class="o">=</span> <span class="s">&quot;path/to/your/cache/folder&quot;</span><span class="p">)</span>
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">Sys.setenv</span><span class="p">(</span><span class="n">RENV_PATHS_CACHE</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;path/to/your/cache/folder&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 <ul>
@@ -520,27 +552,27 @@ The command will also add a copy of dependent packages into the global cache fol
 </li>
 <li><p>You stored the project dependencies information inside the <code class="docutils literal notranslate"><span class="pre">lock.file</span></code>. Having this <code class="docutils literal notranslate"><span class="pre">lock.file</span></code>, you can always restore this processing/development environment.</p></li>
 </ul>
-</div>
-<div class="section" id="creating-other-porjects-folders">
-<h3>Creating Other Porjects Folders<a class="headerlink" href="#creating-other-porjects-folders" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="creating-other-porjects-folders">
+<h3>Creating Other Porjects Folders<a class="headerlink" href="#creating-other-porjects-folders" title="Permalink to this headline">#</a></h3>
 <p>Please follow the same steps and create the other projects folder. You can follow all steps mentioned in the <a class="reference internal" href="#create-a-project"><span class="std std-ref">Creating A Project Folder</span></a> section. The only difference is the DESCRIPTION file contents.</p>
-</div>
-<div class="section" id="installing-a-package-with-a-different-version">
-<h3>Installing A Package with A Different Version<a class="headerlink" href="#installing-a-package-with-a-different-version" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="installing-a-package-with-a-different-version">
+<h3>Installing A Package with A Different Version<a class="headerlink" href="#installing-a-package-with-a-different-version" title="Permalink to this headline">#</a></h3>
 <p>If you follow the steps in the  <a class="reference internal" href="#create-a-project"><span class="std std-ref">Creating A Project Folder</span></a> section. After running the following code in <code class="docutils literal notranslate"><span class="pre">Project_B</span></code>:</p>
 <div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">library</span><span class="p">(</span><span class="n">devtools</span><span class="p">)</span>
 <span class="nf">load_all</span><span class="p">()</span>
 </pre></div>
 </div>
 <p>You will get one error and one warning message.</p>
-<div class="highlight-s notranslate"><div class="highlight"><pre><span></span>ℹ <span class="n">Loading</span> <span class="n">Project_B</span>
-<span class="n">Error</span> <span class="n">in</span> <span class="n">`abort_for_missing_packages()`</span><span class="o">:</span>
-<span class="o">!</span> <span class="n">Dependency</span> <span class="nf">package</span><span class="p">(</span><span class="n">s</span><span class="p">)</span> <span class="s">&#39;xgboost&#39;</span> <span class="n">not</span> <span class="n">available.</span>
-<span class="n">Run</span> <span class="n">`rlang::last_error()`</span> <span class="n">to</span> <span class="n">see</span> <span class="n">where</span> <span class="n">the</span> <span class="n">error</span> <span class="n">occurred.</span>
-<span class="n">Warning</span> <span class="n">messages</span><span class="o">:</span>
-<span class="m">1</span><span class="o">:</span> <span class="n">Need</span> <span class="n">BART</span> <span class="o">==</span> <span class="m">2.5</span> <span class="n">but</span> <span class="n">loaded</span> <span class="n">version</span> <span class="n">is</span> <span class="m">2.9</span> 
-<span class="m">2</span><span class="o">:</span> <span class="nf">In </span><span class="p">(</span><span class="nf">function </span><span class="p">(</span><span class="n">dep_name</span><span class="p">,</span> <span class="n">dep_ver</span> <span class="o">=</span> <span class="s">&quot;*&quot;</span><span class="p">)</span>  <span class="o">:</span>
-  <span class="n">Dependency</span> <span class="n">package</span> <span class="s">&#39;xgboost&#39;</span> <span class="n">not</span> <span class="n">available.</span>
+<div class="highlight-s notranslate"><div class="highlight"><pre><span></span>ℹ<span class="w"> </span><span class="n">Loading</span><span class="w"> </span><span class="n">Project_B</span>
+<span class="n">Error</span><span class="w"> </span><span class="n">in</span><span class="w"> </span><span class="n">`abort_for_missing_packages()`</span><span class="o">:</span>
+<span class="o">!</span><span class="w"> </span><span class="n">Dependency</span><span class="w"> </span><span class="nf">package</span><span class="p">(</span><span class="n">s</span><span class="p">)</span><span class="w"> </span><span class="s">&#39;xgboost&#39;</span><span class="w"> </span><span class="n">not</span><span class="w"> </span><span class="n">available.</span>
+<span class="n">Run</span><span class="w"> </span><span class="n">`rlang::last_error()`</span><span class="w"> </span><span class="n">to</span><span class="w"> </span><span class="n">see</span><span class="w"> </span><span class="n">where</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">error</span><span class="w"> </span><span class="n">occurred.</span>
+<span class="n">Warning</span><span class="w"> </span><span class="n">messages</span><span class="o">:</span>
+<span class="m">1</span><span class="o">:</span><span class="w"> </span><span class="n">Need</span><span class="w"> </span><span class="n">BART</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="m">2.5</span><span class="w"> </span><span class="n">but</span><span class="w"> </span><span class="n">loaded</span><span class="w"> </span><span class="n">version</span><span class="w"> </span><span class="n">is</span><span class="w"> </span><span class="m">2.9</span><span class="w"> </span>
+<span class="m">2</span><span class="o">:</span><span class="w"> </span><span class="nf">In </span><span class="p">(</span><span class="nf">function </span><span class="p">(</span><span class="n">dep_name</span><span class="p">,</span><span class="w"> </span><span class="n">dep_ver</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;*&quot;</span><span class="p">)</span><span class="w">  </span><span class="o">:</span>
+<span class="w">  </span><span class="n">Dependency</span><span class="w"> </span><span class="n">package</span><span class="w"> </span><span class="s">&#39;xgboost&#39;</span><span class="w"> </span><span class="n">not</span><span class="w"> </span><span class="n">available.</span>
 </pre></div>
 </div>
 <p>We have BART installed in the system. But, the version is different. <code class="docutils literal notranslate"><span class="pre">xgboost</span></code> is not installed; however, at the time of preparing this report, <code class="docutils literal notranslate"><span class="pre">xgboost</span></code> <em>1.6.0.1</em> is on CRAN. We need to install the package from a specific version in such cases.</p>
@@ -551,7 +583,7 @@ The command will also add a copy of dependent packages into the global cache fol
 <p>So we can install the missing packages:</p>
 <ul>
 <li><p>Set up the global cache folder path</p>
-<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">Sys.setenv</span><span class="p">(</span><span class="n">RENV_PATHS_CACHE</span> <span class="o">=</span> <span class="s">&quot;path/to/your/cache/folder&quot;</span><span class="p">)</span>
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">Sys.setenv</span><span class="p">(</span><span class="n">RENV_PATHS_CACHE</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;path/to/your/cache/folder&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 </li>
@@ -583,9 +615,9 @@ The command will also add a copy of dependent packages into the global cache fol
 </ul>
 <p>Now, if you take a look at the cache folder, you will see both versions of the <code class="docutils literal notranslate"><span class="pre">BART</span></code> package are available.
 Follow the same steps for the <code class="docutils literal notranslate"><span class="pre">Project_C</span></code>.</p>
-</div>
-<div class="section" id="double-checking-the-environments">
-<h3>Double-checking the Environments<a class="headerlink" href="#double-checking-the-environments" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="double-checking-the-environments">
+<h3>Double-checking the Environments<a class="headerlink" href="#double-checking-the-environments" title="Permalink to this headline">#</a></h3>
 <p>We have three projects on the system that we carefully managed the dependencies. Now let’s see if we can seamlessly change the project and get the appropriate dependencies. To test that,</p>
 <ul>
 <li><p>Open the Project in RStudio</p></li>
@@ -618,10 +650,10 @@ Follow the same steps for the <code class="docutils literal notranslate"><span c
 </li>
 </ul>
 <p>As you can see, the projects are set up to the correct dependencies without any further action from the user side.</p>
-</div>
-</div>
-<div class="section" id="managing-system-dependencies">
-<h2>Managing System Dependencies<a class="headerlink" href="#managing-system-dependencies" title="Permalink to this headline">¶</a></h2>
+</section>
+</section>
+<section id="managing-system-dependencies">
+<h2>Managing System Dependencies<a class="headerlink" href="#managing-system-dependencies" title="Permalink to this headline">#</a></h2>
 <p>In the <a class="reference internal" href="#manage-package-dep"><span class="std std-ref">Managing Package Dependencies</span></a> section, we discussed reproducibility at the package version level. In this section, we want to add one more isolating layer. The steps are discussed in <a class="reference external" href="https://rstudio.github.io/renv/articles/docker.html">Using renv with Docker</a> vignette. In this section, we review those steps by providing more details.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
@@ -635,32 +667,32 @@ Follow the same steps for the <code class="docutils literal notranslate"><span c
 <p class="admonition-title">Note</p>
 <p>A Dockerfile is a recipe to create a docker image. Although for any application we can build it from scratch, in this post, and also most other R related projects, we use images built by great effort by <a class="reference external" href="https://www.rocker-project.org/">The Rocker Project</a>.</p>
 </div>
-<div class="highlight-s notranslate"><div class="highlight"><pre><span></span><span class="n">FROM</span> <span class="n">rocker</span><span class="o">/</span><span class="n">verse</span><span class="o">:</span><span class="m">4.1</span><span class="n">.</span><span class="m">0</span>
+<div class="highlight-s notranslate"><div class="highlight"><pre><span></span><span class="n">FROM</span><span class="w"> </span><span class="n">rocker</span><span class="o">/</span><span class="n">verse</span><span class="o">:</span><span class="m">4.1</span><span class="n">.</span><span class="m">0</span>
 
-<span class="n">LABEL</span> <span class="n">org.opencontainers.image.authors</span><span class="o">=</span><span class="s">&quot;your_name@email.com&quot;</span>
+<span class="n">LABEL</span><span class="w"> </span><span class="n">org.opencontainers.image.authors</span><span class="o">=</span><span class="s">&quot;your_name@email.com&quot;</span>
 
 <span class="c1"># install routine R packages (e.g. installing SuperLearner)</span>
-<span class="n">RUN</span> <span class="n">install2.r</span> <span class="o">--</span><span class="n">error</span> <span class="o">--</span><span class="n">skipinstalled</span> <span class="o">--</span><span class="n">ncpus</span> <span class="m">-1</span> \
-    <span class="n">SuperLearner</span>
+<span class="n">RUN</span><span class="w"> </span><span class="n">install2.r</span><span class="w"> </span><span class="o">--</span><span class="n">error</span><span class="w"> </span><span class="o">--</span><span class="n">skipinstalled</span><span class="w"> </span><span class="o">--</span><span class="n">ncpus</span><span class="w"> </span><span class="m">-1</span><span class="w"> </span>\
+<span class="w">    </span><span class="n">SuperLearner</span>
 
 <span class="c1"># install specific version of renv (here 0.15.1)</span>
-<span class="n">ENV</span> <span class="n">RENV_VERSION</span> <span class="m">0.15</span><span class="n">.</span><span class="m">1</span>
-<span class="n">RUN</span> <span class="n">R</span> <span class="o">-</span><span class="n">e</span> <span class="s">&quot;install.packages(&#39;remotes&#39;, repos = c(CRAN = &#39;https://cloud.r-project.org&#39;))&quot;</span>
-<span class="n">RUN</span> <span class="n">R</span> <span class="o">-</span><span class="n">e</span> <span class="s">&quot;remotes::install_github(&#39;rstudio/renv@${RENV_VERSION}&#39;)&quot;</span>
+<span class="n">ENV</span><span class="w"> </span><span class="n">RENV_VERSION</span><span class="w"> </span><span class="m">0.15</span><span class="n">.</span><span class="m">1</span>
+<span class="n">RUN</span><span class="w"> </span><span class="n">R</span><span class="w"> </span><span class="o">-</span><span class="n">e</span><span class="w"> </span><span class="s">&quot;install.packages(&#39;remotes&#39;, repos = c(CRAN = &#39;https://cloud.r-project.org&#39;))&quot;</span>
+<span class="n">RUN</span><span class="w"> </span><span class="n">R</span><span class="w"> </span><span class="o">-</span><span class="n">e</span><span class="w"> </span><span class="s">&quot;remotes::install_github(&#39;rstudio/renv@${RENV_VERSION}&#39;)&quot;</span>
 
 <span class="c1"># Install Linux internal commands</span>
-<span class="n">RUN</span> <span class="n">apt</span><span class="o">-</span><span class="n">get</span> <span class="n">update</span> \
-	<span class="o">&amp;&amp;</span> <span class="n">apt</span><span class="o">-</span><span class="n">get</span> <span class="n">install</span> <span class="o">-</span><span class="n">y</span> <span class="o">--</span><span class="n">no</span><span class="o">-</span><span class="n">install</span><span class="o">-</span><span class="n">recommends</span> \
-		<span class="n">vim</span> \
-		<span class="n">zsh</span> \
-		<span class="o">&amp;&amp;</span> <span class="n">apt</span><span class="o">-</span><span class="n">get</span> <span class="n">clean</span>
+<span class="n">RUN</span><span class="w"> </span><span class="n">apt</span><span class="o">-</span><span class="n">get</span><span class="w"> </span><span class="n">update</span><span class="w"> </span>\
+<span class="w">	</span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">apt</span><span class="o">-</span><span class="n">get</span><span class="w"> </span><span class="n">install</span><span class="w"> </span><span class="o">-</span><span class="n">y</span><span class="w"> </span><span class="o">--</span><span class="n">no</span><span class="o">-</span><span class="n">install</span><span class="o">-</span><span class="n">recommends</span><span class="w"> </span>\
+<span class="w">		</span><span class="n">vim</span><span class="w"> </span>\
+<span class="w">		</span><span class="n">zsh</span><span class="w"> </span>\
+<span class="w">		</span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">apt</span><span class="o">-</span><span class="n">get</span><span class="w"> </span><span class="n">clean</span>
 </pre></div>
 </div>
 </li>
 <li><p><strong>Step 2</strong>: Build the Image</p></li>
 </ul>
 <p>In the terminal (and inside the same folder of the Dockerfile), Run:</p>
-<div class="highlight-s notranslate"><div class="highlight"><pre><span></span><span class="n">docker</span> <span class="n">build</span> <span class="o">-</span><span class="n">t</span> <span class="n">rvers</span> <span class="n">.</span>
+<div class="highlight-s notranslate"><div class="highlight"><pre><span></span><span class="n">docker</span><span class="w"> </span><span class="n">build</span><span class="w"> </span><span class="o">-</span><span class="n">t</span><span class="w"> </span><span class="n">rvers</span><span class="w"> </span><span class="n">.</span>
 </pre></div>
 </div>
 <ul class="simple">
@@ -672,12 +704,12 @@ Follow the same steps for the <code class="docutils literal notranslate"><span c
 <li><p>The global cache folder</p></li>
 </ul>
 <p>Run the following code:</p>
-<div class="highlight-s notranslate"><div class="highlight"><pre><span></span><span class="n">docker</span> <span class="n">run</span> <span class="o">-</span><span class="n">it</span> <span class="o">--</span><span class="n">rm</span> \
-        <span class="o">-</span><span class="n">p</span> <span class="m">8787</span><span class="o">:</span><span class="m">8787</span> \
-        <span class="o">-</span><span class="n">e</span> <span class="n">USER</span><span class="o">=</span><span class="n">user</span> \
-        <span class="o">-</span><span class="n">e</span> <span class="n">PASSWORD</span><span class="o">=</span><span class="n">password</span> \
-        <span class="o">-</span><span class="n">v</span> <span class="s">&quot;[Path to Project A on your system]:/home/user/Project_A&quot;</span> \
-        <span class="o">-</span><span class="n">v</span> <span class="s">&quot;[Path to cache on your system]:/home/user/cache&quot;</span> <span class="n">rvers</span>
+<div class="highlight-s notranslate"><div class="highlight"><pre><span></span><span class="n">docker</span><span class="w"> </span><span class="n">run</span><span class="w"> </span><span class="o">-</span><span class="n">it</span><span class="w"> </span><span class="o">--</span><span class="n">rm</span><span class="w"> </span>\
+<span class="w">        </span><span class="o">-</span><span class="n">p</span><span class="w"> </span><span class="m">8787</span><span class="o">:</span><span class="m">8787</span><span class="w"> </span>\
+<span class="w">        </span><span class="o">-</span><span class="n">e</span><span class="w"> </span><span class="n">USER</span><span class="o">=</span><span class="n">user</span><span class="w"> </span>\
+<span class="w">        </span><span class="o">-</span><span class="n">e</span><span class="w"> </span><span class="n">PASSWORD</span><span class="o">=</span><span class="n">password</span><span class="w"> </span>\
+<span class="w">        </span><span class="o">-</span><span class="n">v</span><span class="w"> </span><span class="s">&quot;[Path to Project A on your system]:/home/user/Project_A&quot;</span><span class="w"> </span>\
+<span class="w">        </span><span class="o">-</span><span class="n">v</span><span class="w"> </span><span class="s">&quot;[Path to cache on your system]:/home/user/cache&quot;</span><span class="w"> </span><span class="n">rvers</span>
 </pre></div>
 </div>
 <ul>
@@ -688,15 +720,15 @@ Follow the same steps for the <code class="docutils literal notranslate"><span c
 </ul>
 </li>
 <li><p><strong>Step 5</strong>: Set up global cache path</p>
-<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">Sys.setenv</span><span class="p">(</span><span class="n">RENV_PATHS_CACHE</span> <span class="o">=</span> <span class="s">&quot;/home/user/cache&quot;</span><span class="p">)</span>
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">Sys.setenv</span><span class="p">(</span><span class="n">RENV_PATHS_CACHE</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;/home/user/cache&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 </li>
 <li><p><strong>Step 6</strong>: Done!</p></li>
 </ul>
 <p>Now, you have an isolated environment on a new OS (<code class="docutils literal notranslate"><span class="pre">Ubuntu</span> <span class="pre">20.04.4</span> <span class="pre">LTS</span></code>). Inside the RStudio Console, you can run <code class="docutils literal notranslate"><span class="pre">sessionInfo()</span></code> to see more details about the platform and the used BLAS and LAPACK libraries. The changes will be reflected on your localhost if you add new code. Also, the cache will be connected to your global cache (but under a different folder because of different OS), and next time, they will be loaded if needed.</p>
-</div>
-</div>
+</section>
+</section>
 
     <script type="text/x-thebe-config">
     {
@@ -710,7 +742,7 @@ Follow the same steps for the <code class="docutils literal notranslate"><span c
             mode: "python"
         },
         kernelOptions: {
-            kernelName: "python3",
+            name: "python3",
             path: "./blog_posts"
         },
         predefinedOutput: true
@@ -718,44 +750,114 @@ Follow the same steps for the <code class="docutils literal notranslate"><span c
     </script>
     <script>kernelName = 'python3'</script>
 
-              </div>
+                </article>
               
-            
-                <!-- Previous / next buttons -->
-<div class='prev-next-area'> 
-    <a class='left-prev' id="prev-link" href="../developers_zone/python.html" title="previous page">
-        <i class="fas fa-angle-left"></i>
-        <div class="prev-next-info">
-            <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">Python Styling Guide</p>
-        </div>
+
+              
+              
+                <footer class="bd-footer-article">
+                  
+<div class="footer-article-items footer-article__inner">
+  
+    <div class="footer-article-item"><!-- Previous / next buttons -->
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="../developers_zone/python.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Python Styling Guide</p>
+      </div>
     </a>
-    <a class='right-next' id="next-link" href="R_embarrassingly_parallel.html" title="next page">
-    <div class="prev-next-info">
+    <a class="right-next"
+       href="R_embarrassingly_parallel.html"
+       title="next page">
+      <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
         <p class="prev-next-title">Scaling Up/Out Embarrassingly Parallel Problems in R</p>
-    </div>
-    <i class="fas fa-angle-right"></i>
-    </a>
-</div>
-            
-        </div>
-    </div>
-    <footer class="footer">
-  <p>
-    
-      By NSAPH Software Developing Team<br/>
-    
-        &copy; Copyright 2022.<br/>
-  </p>
-</footer>
-</main>
-
-
       </div>
-    </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div></div>
   
-  <script src="../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+</div>
 
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#overview">Overview</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#managing-package-dependencies">Managing Package Dependencies</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#creating-a-project-folder">Creating A Project Folder</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#initializing-renv">Initializing renv</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#creating-other-porjects-folders">Creating Other Porjects Folders</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#installing-a-package-with-a-different-version">Installing A Package with A Different Version</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#double-checking-the-environments">Double-checking the Environments</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#managing-system-dependencies">Managing System Dependencies</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By NSAPH Software Developing Team
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  <p class="copyright">
+    
+      © Copyright 2022.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
+
+  <footer class="bd-footer">
+  </footer>
   </body>
 </html>
